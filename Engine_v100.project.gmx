@@ -287,7 +287,6 @@
       <sprite>sprites\sprTransitionMaskLR</sprite>
       <sprite>sprites\sprTransitionMaskUD</sprite>
     </sprites>
-    <sprite>sprites\sprite160</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="General">

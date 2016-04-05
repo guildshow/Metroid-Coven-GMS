@@ -47,8 +47,8 @@ switch (myid)
         with (other) // oPlayer.
         {
             other.text = eId.GainSuperMissileExpansion; // oItem.
-            scWeaponSetAmmoMax(Weapons.wSuperMissile,scWeaponGetAmmoMax(Weapons.wSuperMissile)+3);
-            scWeaponSetAmmo(Weapons.wSuperMissile,scWeaponGetAmmo(Weapons.wSuperMissile)+3);
+            scWeaponSetAmmoMax(Weapons.wSuperMissile,scWeaponGetAmmoMax(Weapons.wSuperMissile)+2);
+            scWeaponSetAmmo(Weapons.wSuperMissile,scWeaponGetAmmo(Weapons.wSuperMissile)+2);
             scRegulateAmmo(Weapons.wSuperMissile);
         }
         break;

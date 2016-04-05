@@ -44,6 +44,9 @@ switch (transstep)
         break;
     case 4:
         scTransIn();
+        transstep = 5;
+        break;
+    case 5:
         if (transfade > 0) transfade -= transfaderate;
         if (transfade = 0) 
             { transitioning = false; transstep = -1; }

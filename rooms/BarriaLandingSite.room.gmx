@@ -3,8 +3,8 @@
   <caption></caption>
   <width>768</width>
   <height>768</height>
-  <vsnap>8</vsnap>
-  <hsnap>8</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -16,7 +16,7 @@
   <clearDisplayBuffer>0</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1024</w>
+    <w>1706</w>
     <h>1033</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>622</xoffset>
-    <yoffset>673</yoffset>
+    <xoffset>-405</xoffset>
+    <yoffset>-155</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="grdSnow" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -97,7 +97,7 @@
     <instance objName="oShip" x="144" y="144" name="inst_60B1D6BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock8" x="512" y="656" name="inst_A81BE403" locked="0" code="scDefineBlock(Blocks.bBomb);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHideMapMaker" x="16" y="0" name="inst_E1BA8BBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlayer" x="144" y="296" name="inst_40F352AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlayer" x="672" y="128" name="inst_40F352AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oTransitionTubeLR" x="768" y="128" name="inst_1E95E0B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoorGuideE" x="720" y="128" name="inst_2280B984" locked="0" code="scDefineDoor(Doors.dBlue);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSmallLightEW" x="584" y="208" name="inst_059312D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

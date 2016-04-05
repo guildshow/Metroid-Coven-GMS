@@ -10,40 +10,40 @@ ysize = 1;
 switch (object_index)
 {
     case oDomeLight:
-        ox = x; oy = y; size = .1; angle = random(360);
+        size = .1; angle = random(360);
         break;
     // --------
     case oSmallLightEW:
-        ox = x; oy = y; xsize = .7; ysize = 1; size = .1; angle = 0;
+        xsize = .7; ysize = 1; size = .1; angle = 0;
         break;
     case oSmallLightNS:
-        ox = x; oy = y; xsize = 1; ysize = .7; size = .1; angle = 0;
+        xsize = 1; ysize = .7; size = .1; angle = 0;
         break;
     // --------
     case oSmallWallLightE:
-        ox = x-3; oy = sprite_height/2; xsize = .7; ysize = 1; size = .25; angle = 0;
+        ox = x-3; xsize = .7; ysize = 1; size = .25; angle = 0;
         break;
     case oSmallWallLightW:
-        ox = x+3; oy = sprite_height/2; xsize = .7; ysize = 1; size = .25; angle = 0;
+        ox = x+3; xsize = .7; ysize = 1; size = .25; angle = 0;
         break;
     case oSmallWallLightN:
-        ox = sprite_width/2; oy = y-3; xsize = 1; ysize = .7; size = .25; angle = 0;
+        oy = y-3; xsize = 1; ysize = .7; size = .25; angle = 0;
         break;
     case oSmallWallLightS:
-        ox = sprite_width/2; oy = y+3; xsize = 1; ysize = .7; size = .25; angle = 0;
+        oy = y+3; xsize = 1; ysize = .7; size = .25; angle = 0;
         break;
     // --------
     case oWallLightE:
-        xsize = .7; ysize = 1; ox = x-3; oy = sprite_height/2; size = .6; angle = 0;
+        xsize = .7; ysize = 1; ox = x-4; size = .6; angle = 0;
         break;
     case oWallLightW:
-        xsize = .7; ysize = 1; ox = x+3; oy = sprite_height/2; size = .6; angle = 0;
+        xsize = .7; ysize = 1; ox = x+4; size = .6; angle = 0;
         break;
     case oWallLightN:
-        xsize = 1; ysize = .7; ox = sprite_width/2; oy = y-3; size = .6; angle = 0;
+        xsize = 1; ysize = .7; oy = y-4; size = .6; angle = 0;
         break;
     case oWallLightS:
-        xsize = 1; ysize = .7; ox = sprite_width/2; oy = y+3; size = .6; angle = 0;
+        xsize = 1; ysize = .7; oy = y+4; size = .6; angle = 0;
         break;
 }
 light1 = instance_create(ox,oy,oLight);
