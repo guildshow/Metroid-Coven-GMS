@@ -1,19 +1,36 @@
-PreviousWeapon = HoldingWeaponId;
-CurrentPrimary = NewPrimary;
-HoldingWeaponId = argument0;
-WeaponDefined = true;
+PreviousWeapon = HoldingWeaponId; // Used if switching weapons.
+                                  // Stores the weapon we are switching from.
+CurrentPrimary = NewPrimary; // Set the primary weapon we are switching to.
+HoldingWeaponId = argument0; // ^
+WeaponDefined = true; // ^
 
 switch (HoldingWeaponId)
 {
+/*
+_RequiresAmmo(true/false)   Does the weapon require ammo to function?
+RateOfFire                  How fast the weapon fires if it is not a click-speed firing weapon.
+                            Determines how any frames pass between each projectile is fired.
+                            If it IS a click-speed firing weapon, RateOfFire should be 0.
+WeaponProjectile            Tells the game which eId to use for the projectile. This varies for some
+                               weapons that use proxies to fire multiple projectiles at once.
+WeaponAccuracy              Set the randomness of the direction a projectile moves when fired in
+                               degrees.
+ChargerMax                  This determines the maximum charge beam level before it stops charging.
+                            This is really only used to determine what weapons charge and what ones
+                               do not, but we can still manipulate the value if we want to.
+Heating                     Determines if the weapon uses heat.
+                            If this number is greater than zero, the weapon uses heat, and the number
+                               determines the rate at which it heats up. 
+Cannon                      Sets the subimage for the arm cannon sprite.
+*/
+
 // --- Beams ---
     case Weapons.wPowerBeam:  
         _RequiresAmmo(false);
-        RateOfFire          = 6;           
+        RateOfFire          = 6;
         WeaponProjectile    = Weapons.wPowerBeam;
-        WeaponAccuracy      = 3;            
-        ProjectilesToFire   = 1;            
+        WeaponAccuracy      = 3;
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = 0;   
         break;
@@ -21,10 +38,8 @@ switch (HoldingWeaponId)
         _RequiresAmmo(false);
         RateOfFire          = 12;           
         WeaponProjectile    = Weapons.wWaveBeam;
-        WeaponAccuracy      = 0;            
-        ProjectilesToFire   = 1;          
+        WeaponAccuracy      = 0;          
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = 1;
         break;
@@ -32,10 +47,8 @@ switch (HoldingWeaponId)
         _RequiresAmmo(false);
         RateOfFire          = 13;           
         WeaponProjectile    = Weapons.wPlasmaBeam;
-        WeaponAccuracy      = 2;            
-        ProjectilesToFire   = 1;          
+        WeaponAccuracy      = 2;
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 10;
         Cannon              = 2;
         break;
@@ -43,10 +56,8 @@ switch (HoldingWeaponId)
         _RequiresAmmo(false);
         RateOfFire          = 14;           
         WeaponProjectile    = Weapons.wSpazerBeam;
-        WeaponAccuracy      = 0;            
-        ProjectilesToFire   = 1;          
+        WeaponAccuracy      = 0;
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = 3;
         break;
@@ -54,10 +65,8 @@ switch (HoldingWeaponId)
         _RequiresAmmo(false);
         RateOfFire          = 3;           
         WeaponProjectile    = Weapons.wPulseBeam;
-        WeaponAccuracy      = 2;            
-        ProjectilesToFire   = 1;          
+        WeaponAccuracy      = 2;
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = 4;
         break;
@@ -65,10 +74,8 @@ switch (HoldingWeaponId)
         _RequiresAmmo(false);
         RateOfFire          = 14;           
         WeaponProjectile    = Weapons.wIceBeam;
-        WeaponAccuracy      = 5;            
-        ProjectilesToFire   = 1;          
+        WeaponAccuracy      = 5;
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = 5;
         break;
@@ -76,10 +83,8 @@ switch (HoldingWeaponId)
         _RequiresAmmo(false);
         RateOfFire          = 0;           
         WeaponProjectile    = Weapons.wRuptureBeam;
-        WeaponAccuracy      = 3;            
-        ProjectilesToFire   = 1;          
+        WeaponAccuracy      = 3;
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = 6;
         break;
@@ -87,10 +92,8 @@ switch (HoldingWeaponId)
         _RequiresAmmo(false);
         RateOfFire          = 11;           
         WeaponProjectile    = Weapons.wPhazonBeam;
-        WeaponAccuracy      = 1;            
-        ProjectilesToFire   = 1;          
+        WeaponAccuracy      = 1; 
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = 7;
         break;
@@ -100,9 +103,7 @@ switch (HoldingWeaponId)
         RateOfFire          = 0;             
         WeaponProjectile    = Weapons.wMissileLauncher;
         WeaponAccuracy      = 0;
-        ProjectilesToFire   = 1;
         ChargerMax          = 0;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = 8;  
         break;
@@ -111,9 +112,7 @@ switch (HoldingWeaponId)
         RateOfFire          = 40;             
         WeaponProjectile    = Weapons.wSuperMissile;
         WeaponAccuracy      = 0;
-        ProjectilesToFire   = 1;
         ChargerMax          = 0;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = 9;  
         break;
@@ -122,10 +121,8 @@ switch (HoldingWeaponId)
         _RequiresAmmo(false);
         RateOfFire          = 0;           
         WeaponProjectile    = Weapons.wBallBomb;
-        WeaponAccuracy      = 0;            
-        ProjectilesToFire   = 1;          
+        WeaponAccuracy      = 0;
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = -1;
         break;
@@ -133,10 +130,8 @@ switch (HoldingWeaponId)
         _RequiresAmmo(true);
         RateOfFire          = 0;           
         WeaponProjectile    = Weapons.wPowerBomb;
-        WeaponAccuracy      = 0;            
-        ProjectilesToFire   = 1;          
+        WeaponAccuracy      = 0;
         ChargerMax          = 100;
-        subimage            = 0;
         Heating             = 0;
         Cannon              = -1;
         break;
@@ -146,14 +141,12 @@ switch (HoldingWeaponId)
     default:
         RateOfFire          = 0;
         WeaponProjectile    = -1;
-        ProjectilesToFire   = 0;
         WeaponDefined       = false;
         AmmoAmount          = 0;
         ChargerMax          = 0;
         Heating             = 0;
         Cannon              = 10;
 }
-
 if (argument1 = 1) exit; // Set argument1 to 1 if you don't want a switching effect.
 
 // Play contextual weapon-switching sound.
@@ -177,4 +170,4 @@ flash.image_alpha = 1;
 flash.image_angle = image_angle;
 flash.image_speed = 0;
 flash.depth = 6;
-// See "oEffect" object for remainder of code.
+// See "oEffect" object for remainder of code for the weapon-switching effect.

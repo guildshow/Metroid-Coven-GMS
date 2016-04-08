@@ -3,30 +3,38 @@ if (!instance_exists(oCannon)) instance_create(x,y,oCannon);
 
 scPlayerStartValues();
 
-AnimationStart = 0;
-AnimationEnd = 0;
-BallAnimationStart = 0;
-BallAnimationEnd = 0;
-BallAnimationLimit = 2;
-AnimationTimer = 0;
-MorphBall = false;
+AnimationStart = 0; // Determines the start and stop frames of continuous animation.
+                    // Varies by suit/state.
+AnimationEnd = 0;   // ^
+BallAnimationStart = 0; // Same as above, but for Morph Ball sprite.
+BallAnimationEnd = 0;   // ^
+BallAnimationLimit = 2; // Number that AnimationTimer must reach before advancing
+                        // animation frames.
+AnimationTimer = 0; // Determines the rate at which the player advances animation frames.
+MorphBall = false; // Determines if the player is in Morph Ball mode.
+
+// Temporary, currently not in use
 Dodge = 0;
 DodgeCooldown = 0;
+// ^
 
-TakeHitDirection = -1;
-CanTakeHit = true;
+TakeHitDirection = -1; // Determines which direction the player bounces when taking damage.
+CanTakeHit = true; // Checks if the player is currently taking damage.
 
 friction = .2; // Change friction for different surfaces.
-MaxSpeed = -1;
-MaxBallSpeed = -1;
-SpeedInterval = 5;
-OnIce = false;
+MaxSpeed = -1; // Determines top speed for player.
+MaxBallSpeed = -1; // Same as above, but for Morph Ball mode.
+SpeedInterval = 5; // Determines the rate of movement speed acceleration.
+                   // The higher the number, the slower the rate of acceleration.
+                   // Used, for example, on ice surfaces.
+OnIce = false; // Are we on an ice tile?
 
-Suit = -1;
-scDefineSuit(Other.sPowerSuit);
+Suit = -1; // Suit variable.
+scDefineSuit(Other.sPowerSuit); // Upon the player being created, set the current suit to the
+                                // Power Suit.
 
-stepx = x;
-stepy = y;
+stepx = x; // Used for placing footsteps.
+stepy = y; // ^
 
 mdirection = 0; // Current move direction.
 mhspeed = 0; // Current horizontal move speed.
@@ -38,34 +46,40 @@ moving_direction_previous = 0; // Tells the player's previous moving direction.
 mspeed = 0; // Current move speed.
 
 // --- Weapon variables and handling ---
-CurrentPrimary = Weapons.wPowerBeam;
-NewPrimary = Weapons.wPowerBeam;
-CurrentUnmorphedSecondary = Weapons.wMissileLauncher;
-CurrentMorphedSecondary = Weapons.wPowerBomb;
-Cannon = 0;
-PreviousWeapon = 0;
-HoldingWeaponId = CurrentPrimary;
-JustSwitched = 0;
+CurrentPrimary = Weapons.wPowerBeam; // Current primary weapon (beam weapon).
+NewPrimary = Weapons.wPowerBeam; // The weapon the player will be switching to when switching
+                                 //   weapons.
+CurrentUnmorphedSecondary = Weapons.wMissileLauncher; // The current secondary weapon.
+CurrentMorphedSecondary = Weapons.wPowerBomb; // The current secondary weapon in Morph Ball mode.
+                                              // Currently only the Power Bomb can be this var.
+Cannon = 0; // Sets the current subimage for the arm cannon sprite.
+PreviousWeapon = 0; // Previous selected weapon. Simply stores so we can switch back to it when
+                    //   unmorphing.
+HoldingWeaponId = CurrentPrimary; // The currently held weapon (primary or secondary, and the eId).
+JustSwitched = 0; // Did we just switch weapons?
 
-pulseshot = 0;
-pulsechargeshot = 0;
-pulsechargefiring = 0;
+pulseshot = 0; // These variables control the Pulse Beam behavior.
+               // This one determines how many shots have been fired normally (no charge beam).
+pulsechargeshot = 0; // This determines how many shots have been fired if the charge beam was used.
+pulsechargefiring = 0; // Is the Pulse Beam firing a charged volley?
 
-ExistingBombs = 0;
-ExistingPowerBombs = 0;
+ExistingBombs = 0; // Will be removed soon. Counts number of Bombs currently laid by the player.
+ExistingPowerBombs = 0; // ^ Same, but for Power Bombs.
 
-WeaponDirectionOffset = 270;
-WeaponDistanceOffset = 6;
-WeaponAim = 0;
-WeaponXPosition = 0;
-WeaponYPosition = 0;
+WeaponDirectionOffset = 270; // Part of the math involved in telling the game where the arm cannon
+                             //   needs to be drawn.
+WeaponDistanceOffset = 6; // ^
+WeaponAim = 0; // ^
+WeaponXPosition = 0; // Determines the location of the tip of the arm cannon for the current weapon.
+WeaponYPosition = 0; // ^
 
-ChargeObject = noone;
+ChargeObject = noone; // Allows for control of the beam charging effect.
 
-scDefineWeapon(CurrentPrimary,1);
+scDefineWeapon(CurrentPrimary,1); // Set the current weapon.
 
 // --- Lights ---
 // Flashlight...
+// This spawns the flashlight object and then sets the various variables within it to function.
 torchSlave = instance_create(x,y,oLight);
 torchSlave.master = id;
 torchSlave.hideable = false;
@@ -79,6 +93,7 @@ torchSlave.AmIOn = false;
 torchSlave.WasOn = false;
 
 // Suit glow...
+// Same as above for the flashlight, but is used for the player's ambient glow.
 suitSlave = instance_create(x,y,oLight);
 suitSlave.master = id;
 suitSlave.hideable = false;
@@ -119,7 +134,7 @@ KeyChargeUp          = mouse_check_button(mb_right);
 KeyChargePressed     = mouse_check_button_pressed(mb_right);
 KeyChargeRelease     = mouse_check_button_released(mb_right);
 
-// --- Under Review ---
+// --- Under Review/Temporary ---
 KeyDodge             = keyboard_check_pressed(vk_space);
 KeyDodgeHold         = keyboard_check(vk_space);
 KeyTorch             = keyboard_check_pressed(ord("F"));
