@@ -8,6 +8,8 @@ if (eId.paused = 0) then
     if (!sprite_exists(eId.sPause)) then
     {
         // Create an image from the screen.
+        // The following line is temporary. Eventually, we need to create a better, more flexible
+        //   system that uses a variable to freeze things, like we do with transitions.
         eId.sPause = sprite_from_screen(0,0,view_wview[0],view_hview[0],false,false,0,0);
         if (instance_exists(oWeatherSnow))
         {

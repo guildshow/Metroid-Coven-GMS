@@ -333,14 +333,15 @@
   </paths>
   <scripts name="scripts">
     <scripts name="- Miscellaneous">
-      <script>scripts\move_contact_object.gml</script>
+      <scripts name="Outsourced">
+        <script>scripts\move_contact_object.gml</script>
+        <script>scripts\point_in_view.gml</script>
+        <script>scripts\point_in_view_ext.gml</script>
+        <script>scripts\sprite_from_screen.gml</script>
+      </scripts>
       <script>scripts\Pause.gml</script>
-      <script>scripts\point_in_view.gml</script>
-      <script>scripts\point_in_view_ext.gml</script>
       <script>scripts\scDrawHUD.gml</script>
       <script>scripts\scSpawnTestItems.gml</script>
-      <script>scripts\sprite_from_screen.gml</script>
-      <script>scripts\TODValues.gml</script>
       <script>scripts\scDebugModeText.gml</script>
     </scripts>
     <scripts name="Actors">
@@ -348,7 +349,7 @@
       <script>scripts\scActorDeath.gml</script>
       <script>scripts\scActorStep.gml</script>
       <scripts name="Actor Functions">
-        <script>scripts\_ActorLoot.gml</script>
+        <script>scripts\scActorLoot.gml</script>
       </scripts>
     </scripts>
     <scripts name="Engine Initialization">
@@ -466,7 +467,6 @@
       <object>objects\oVectorLine</object>
       <object>objects\oWallShootThrough</object>
       <object>objects\pCollision</object>
-      <object>objects\oMouse</object>
     </objects>
     <objects name="Classes">
       <objects name="Parents">
@@ -556,6 +556,7 @@
     <rooms name="Barria">
       <room>rooms\BarriaLandingSite</room>
       <room>rooms\BarriaIntWest</room>
+      <room>rooms\BarriaCacheBallBomb</room>
     </rooms>
     <rooms name="Generic Rooms">
       <room>rooms\NewRoomPalette</room>

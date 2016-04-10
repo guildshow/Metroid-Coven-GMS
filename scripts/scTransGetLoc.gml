@@ -1,8 +1,9 @@
-// Runs in the create event of the transition objects' parent object.
+// Runs in the create event of the transition parent object.
 switch (room) // Check current room.
 {
     // Get the position of the transition object in the room.
-    case BarriaLandingSite: 
+    case BarriaLandingSite:
+        // Set a variable (trans) to match with the target room's transition object.
         trans = 1;
         break;
     case BarriaIntWest:
@@ -16,5 +17,6 @@ switch (room) // Check current room.
             if (y < room_height/2) trans = 2;
             else trans = 3;
         }
+        //switch (trans)
         break;
 }

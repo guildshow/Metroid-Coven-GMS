@@ -13,6 +13,11 @@ if (transfade > 0)
 }
 // If we are NOT paused, draw the HUD like normal.
 if (!sprite_exists(sPause)) scDrawHUD();
+// Draw the mouse stuff.
+if (eId.visor = 0) sprite_index = sprCombatVisor;
+else sprite_index = sprScanVisor;
+x = mouse_x; y = mouse_y;
+draw_self();
 // If we are currently trying to pause or post a message, do the drawing for that.
 if (fadeStage != -1)
 {

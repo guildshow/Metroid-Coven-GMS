@@ -75,12 +75,15 @@ DrawRed = false; // Draws a short, red flash on the screen if we are taking dama
             <string>// Find the target x and y that the view will follow.
 if (instance_exists(oPlayer))
 {
-    xx = mean(oPlayer.x,mean(mouse_x,oPlayer.x))+choose(shake,-shake);
-    yy = mean(oPlayer.y,mean(mouse_y,oPlayer.y))+choose(shake,-shake);
+    ox = lengthdir_x(-30,point_direction(oPlayer.x,oPlayer.y,mouse_x,mouse_y));
+    oy = lengthdir_y(-30,point_direction(oPlayer.x,oPlayer.y,mouse_x,mouse_y));
+    xx = mean(oPlayer.x,mean(mouse_x+ox,oPlayer.x))+choose(shake,-shake);
+    yy = mean(oPlayer.y,mean(mouse_y+oy,oPlayer.y))+choose(shake,-shake);
 }
 // Move towards the target view location.
-move_towards_point(xx,yy,point_distance(xx,yy,x,y)*.075) // Change the number at the end to
-                                                         // adjust the rate of movement.
+move_towards_point(xx,yy,point_distance(xx,yy,x,y)*.05) // Change the number at the end to
+                                                         //   adjust the rate of movement.
+                                                         // 0 freezes the controller.
 // Center the view on the controller.
 // Currently, view shaking is disabled. Uncomment the second half of these lines of code to turn it on.
 view_xview = (x-view_wview/2);//+random;_range(shake,-shake);

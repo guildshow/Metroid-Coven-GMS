@@ -1,5 +1,5 @@
-//move_contact_object(speed,direction,pCollision)
-
+/// move_contact_object(speed,direction,object)
+// Returns collision.
 var i,ix,iy,collide;
 i=0;
 collide=false;
@@ -16,5 +16,4 @@ for(i=0;i<argument0;i+=1)
         break;
     }
 }
-
-//return(collide);
+// Unknown source.

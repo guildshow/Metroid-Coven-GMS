@@ -39,8 +39,8 @@ thisroom = -1;
 destinationroom = -1;
 tx = 0; // Location of the transitioning object that the player collides with.
 ty = 0; // ^
-tdx = 0; // X distance between the player and the transitioning object (t-object).
-tdy = 0; // Y distance between the player and the t-object.
+tdx = 0; // Distance between the player and the transitioning object (t-object).
+tdy = 0; // ^
 transfade = 0; // When > 0, uses this number as an alpha to fade out the screen.
 transfaderate = 0.025; // The rate at which the screen fades out during a transition.
 transdone = false; // Checks if the transition is finished.
@@ -49,10 +49,11 @@ transbuffer = 0; // Delay counter for transitions before continuing.
 transbuffermax = 15; // Length of delay for transitions before continuing to next step.
 transdir = 0; // Direction we move the t-object once were in the transition room.
 transrate = 8; // Rate at which t-objects move across the screen during a transition.
-tsx = 0; // X location to place player after a transition is done.
-tsy = 0; // Y location to place player after a transition is done.
+tsx = 0; // Location to place player after a transition is done.
+tsy = 0; // ^
+vox = 0; // Amount we need to adjust the t-object before moving it across the view.
+voy = 0; // ^
 
 // Initialize miscellaneous stuff.
 window_set_cursor(cr_none); // Hide the mouse cursor because we use our own.
-instance_create(x,y,oMouse); // Spawn mouse object.
-sound_global_volume(0.5); // Master volume control.
+sound_global_volume(1); // Master volume control.

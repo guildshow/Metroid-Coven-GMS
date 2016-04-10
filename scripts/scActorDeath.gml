@@ -19,7 +19,7 @@ switch (myid)
         }
         with (instance_create(x,y,oDestroyAnim))
             { image_speed = .25; sprite_index = sprZoomerDie; depth = other.depth; }
-        _ActorLoot();
+        scActorLoot();
         sound_play(EnemyZoomerDeath);
         break;
 }
