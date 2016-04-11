@@ -112,8 +112,8 @@ sound_stop(BeamChargeStart);
             <kind>1</kind>
             <string>if (instance_exists(master))
 {
-    x = master.WeaponXPosition+lengthdir_x(15,master.image_angle);
-    y = master.WeaponYPosition+lengthdir_y(15,master.image_angle);
+    x = master.WeaponXPosition+lengthdir_x(15,master.WeaponAim);
+    y = master.WeaponYPosition+lengthdir_y(15,master.WeaponAim);
     if (master.MorphBall = true) or (eId.visor = 1)
         { master.Charger = 0; instance_destroy(); }
 }

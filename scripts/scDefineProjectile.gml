@@ -10,23 +10,21 @@ switch (myid)
         sprite_index = sprPower;
         Damage = 1;
         DiesOnContact = true;
+        pop = instance_create(x,y,oParticle);
+        pop.myid = Weapons.wPowerBeam;
         if (Charger >= 60)
         {
             Damage = 5;
             sound_play(BeamPower);
             sprite_index = sprPowerCharge;
             _ProjectileLight(.2,c_white,c_yellow,1);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 1;
+            pop.c = 1;
         }
         else
         {
             sound_play(BeamPower);
             _ProjectileLight(.1,c_white,c_yellow,.6)
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 0;
+            pop.c = 0;
         }
         alarm[0] = 20+random(5);
         with (instance_create(x,y,oDestroyAnim))
@@ -74,6 +72,8 @@ switch (myid)
         Damage = 5;
         alarm[0] = 30+random(5);
         DiesOnContact = true;
+        pop = instance_create(x,y,oParticle);
+        pop.myid = Projectiles.pWaveBeam;
         if (Charger >= 60)
         {
             Damage = 8;
@@ -81,17 +81,13 @@ switch (myid)
             sound_play(BeamWave);
             sprite_index = sprWaveCharge;
             _ProjectileLight(.2,c_white,c_purple,1);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 1;
+            pop.c = 1;
         }
         else
         {
             sound_play(BeamWave);
             _ProjectileLight(.1,c_white,c_purple,.6);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 0;
+            pop.c = 0;
         }
         break;
 // --- Plasma Beam ---
@@ -101,6 +97,8 @@ switch (myid)
         speed = 6;
         sprite_index = sprPlasma;
         Damage = 7;
+        pop = instance_create(x,y,oParticle);
+        pop.myid = Weapons.wPlasmaBeam;
         if (Charger >= 60)
         {
             Damage = 13;
@@ -108,17 +106,13 @@ switch (myid)
             sound_play(BeamPlasma);
             sprite_index = sprPlasmaCharge;
             _ProjectileLight(.3,c_white,c_orange,1);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 1;
+            pop.c = 1;
         }
         else
         {
             sound_play(BeamPlasma);
             _ProjectileLight(.15,c_white,c_orange,.6);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 0;
+            pop.c = 0;
         }
         alarm[0] = 35+random(5);
         DiesOnContact = true;
@@ -176,6 +170,8 @@ switch (myid)
         Damage = 3;
         alarm[0] = 25;
         DiesOnContact = true;
+        pop = instance_create(x,y,oParticle);
+        pop.myid = Projectiles.pSpazerBeam;
         if (Charger >= 60)
         {
             Damage = 6;
@@ -183,17 +179,13 @@ switch (myid)
             sound_play(BeamSpazer);
             sprite_index = sprSpazerCharge;
             _ProjectileLight(.2,c_white,c_lime,1);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 1;
+            pop.c = 1;
         }
         else
         {
             sound_play(BeamSpazer);
             _ProjectileLight(.1,c_white,c_lime,.6);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 0;
+            pop.c = 0;
         }
         break;
 // --- Pulse Beam ---
@@ -207,9 +199,9 @@ switch (myid)
         if (sound_isplaying(BeamPulse)) sound_stop(BeamPulse);
         sound_play(BeamPulse);
         _ProjectileLight(.1,c_white,make_color_rgb(0,255,255),.6);
-        //pop = instance_create(x,y,oParticle);
-        //pop.myid = myid;
-        //pop.c = 0;
+        pop = instance_create(x,y,oParticle);
+        pop.myid = Weapons.wPulseBeam;
+        pop.c = 0;
         alarm[0] = 15+random(5);
         with (instance_create(x,y,oDestroyAnim))
             { sprite_index = sprBeamFire1; image_blend = make_color_rgb(0,255,255); image_speed = .5; }
@@ -222,23 +214,21 @@ switch (myid)
         sprite_index = sprIce;
         Damage = 3;
         DiesOnContact = true;
+        pop = instance_create(x,y,oParticle);
+        pop.myid = Weapons.wIceBeam;
         if (Charger >= 60)
         {
             Damage = 8;
             sound_play(BeamIce);
             sprite_index = sprIceCharge;
             _ProjectileLight(.2,c_white,make_color_rgb(94,174,255),1);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 1;
+            pop.c = 1;
         }
         else
         {
             sound_play(BeamIce);
             _ProjectileLight(.1,c_white,make_color_rgb(94,174,255),.6);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 0;
+            pop.c = 0;
         }
         if (Charger < 60) alarm[0] = 25+random(5);
         else alarm[0] = 35+random(5);
@@ -254,23 +244,21 @@ switch (myid)
         sprite_index = sprRupture;
         Damage = 3;
         DiesOnContact = true;
+        pop = instance_create(x,y,oParticle);
+        pop.myid = Weapons.wRuptureBeam;
         if (Charger >= 60)
         {
             Damage = 7;
             sound_play(BeamRupture);
             sprite_index = sprRuptureCharge;
             _ProjectileLight(.2,c_white,c_orange,1);
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 1;
+            pop.c = 1;
         }
         else
         {
             sound_play(BeamRupture);
             _ProjectileLight(.1,c_white,c_orange,.6)
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 0;
+            pop.c = 0;
         }
         alarm[0] = 25+random(5);
         with (instance_create(x,y,oDestroyAnim))
@@ -297,8 +285,10 @@ switch (myid)
         Damage = 0;
         alarm[0] = 3;
         var xx,yy;
-        xx = oPlayer.WeaponXPosition+lengthdir_x(20,direction)
-        yy = oPlayer.WeaponYPosition+lengthdir_y(20,direction)
+        xx = oPlayer.WeaponXPosition+lengthdir_x(20,direction);
+        yy = oPlayer.WeaponYPosition+lengthdir_y(20,direction);
+        pop = instance_create(x,y,oParticle);
+        pop.myid = Weapons.wPhazonBeam;
         if (Charger < 60)
         {
             with (instance_create(xx,yy,oProjectile))
@@ -310,9 +300,7 @@ switch (myid)
                 scDefineProjectile(Projectiles.pPhazonBeam);
                 alarm[0] = 20+random(5);
             }
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 0;
+            pop.c = 0;
         }
         else
         {
@@ -328,9 +316,7 @@ switch (myid)
                     alarm[0] = 25+random(5);
                 }
             }
-            //pop = instance_create(x,y,oParticle);
-            //pop.myid = myid;
-            //pop.c = 1;
+            pop.c = 1;
         }
         with (instance_create(x,y,oDestroyAnim))
             { sprite_index = sprBeamFire1; image_blend = c_blue; image_speed = .5; }

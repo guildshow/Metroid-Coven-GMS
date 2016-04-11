@@ -24,7 +24,7 @@ WeaponAim -= min(abs(dw), 11) * sign(dw);
 if (point_distance(x,y,stepx,stepy) > 20)
 {
     var o;
-    o = instance_create(x,y,oDooDad);
+    o = instance_create(x,y,oDoodad);
     
     o.sprite_index = sprFootPrint;
     o.image_single = MorphBall;

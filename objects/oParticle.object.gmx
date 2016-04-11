@@ -210,7 +210,7 @@ switch (myid)
         part_type_shape(burstbs,pt_shape_spark);
         part_type_color1(burstbs,c_orange);
         part_type_size(burstbs,0.1,0.3,0,0);
-        part_type_life(burstbs,10*ch,20*ch);
+        part_type_life(burstbs,15*ch,25*ch);
         part_type_speed(burstbs,0.5,1,0,0);
         part_type_alpha3(burstbs,1,1,0);
         part_type_direction(burstbs,0,360,0,0);
@@ -225,6 +225,7 @@ switch (myid)
         part_type_direction(burstbs,0,360,0,0);
         break;
 }
+part_emitter_region(systembs,emitterbs,x,x,y,y,ps_shape_rectangle,ps_distr_linear);
 alarm[1] = 1;
 </string>
           </argument>
@@ -248,8 +249,7 @@ alarm[1] = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part_emitter_region(systembs,emitterbs,x,x,y,y,ps_shape_rectangle,ps_distr_linear);
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

@@ -1,3 +1,10 @@
+switch (object_index)
+{
+    // Make sure we don't run this script if we are not a 16x or 8x block.
+    case oIceLR:
+    case oIceUD:
+        exit; break;
+}
 sound_play(choose(Crumble1,Crumble2,Crumble3,Crumble4,Crumble5,Crumble6))
 with (instance_create(x,y,oDestroyAnim))
 {

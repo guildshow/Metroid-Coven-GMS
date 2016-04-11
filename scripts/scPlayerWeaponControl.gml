@@ -1,4 +1,4 @@
-if (!Overheated)
+if (!Overheated) and (!pulsechargeshot)
 {
     if (KeyPowerBeam) NewPrimary = Weapons.wPowerBeam;
     if (KeyWaveBeam) && (HasWaveBeam) NewPrimary = Weapons.wWaveBeam;
@@ -14,7 +14,7 @@ if (KeySecondarySwitch) and (!MorphBall)
     if (CurrentUnmorphedSecondary = Weapons.wMissileLauncher) and (HasSuperMissile) CurrentUnmorphedSecondary = Weapons.wSuperMissile;
     else CurrentUnmorphedSecondary = Weapons.wMissileLauncher;
 }
-if (Overheated) exit;
+if (Overheated) or (pulsechargeshot) exit;
 if (!MorphBall)
 {
     if (KeySecondaryHeld) and (HasMissileLauncher)

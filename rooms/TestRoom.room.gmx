@@ -27,9 +27,9 @@ vector_path_add(oVectorLine,room1path1,0,0,0)</code>
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>1</page>
-    <xoffset>7</xoffset>
-    <yoffset>65</yoffset>
+    <page>0</page>
+    <xoffset>73</xoffset>
+    <yoffset>298</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -64,7 +64,7 @@ vector_path_add(oVectorLine,room1path1,0,0,0)</code>
     <instance objName="oItem" x="272" y="80" name="inst_E38B5B9E" locked="0" code="scDefineItem(Items.iEnergyTank);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oItem" x="256" y="80" name="inst_D29F9D40" locked="0" code="scDefineItem(Items.iEnergyTank);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oItem" x="240" y="80" name="inst_AEF4BC29" locked="0" code="scDefineItem(Items.iEnergyTank);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlayer" x="432" y="224" name="inst_80456030" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlayer" x="304" y="464" name="inst_80456030" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoorGuideW" x="64" y="96" name="inst_285CD6ED" locked="0" code="scDefineDoor(Doors.dBlue);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoorGuideW" x="64" y="160" name="inst_2860FB8E" locked="0" code="scDefineDoor(Doors.dRed);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoorGuideW" x="64" y="224" name="inst_CD4A3AC8" locked="0" code="scDefineDoor(Doors.dGreen);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -97,6 +97,14 @@ vector_path_add(oVectorLine,room1path1,0,0,0)</code>
     <instance objName="oItem" x="512" y="144" name="inst_BDB627D3" locked="0" code="scDefineItem(Items.iPowerBombExpansion);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oItem" x="544" y="144" name="inst_07003380" locked="0" code="scDefineItem(Items.iPowerBombExpansion);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oItem" x="576" y="144" name="inst_B40499E9" locked="0" code="scDefineItem(Items.iPowerBombExpansion);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIceLR" x="416" y="464" name="inst_D5E9A538" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIceLR" x="496" y="464" name="inst_02B9355B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIceLR" x="576" y="464" name="inst_BC329707" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIceLR" x="656" y="464" name="inst_40FEBDA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIceUD" x="464" y="576" name="inst_628C6200" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIceUD" x="608" y="576" name="inst_4392E9E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIceUD" x="464" y="656" name="inst_CFA9DDF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIceUD" x="608" y="656" name="inst_E2A0E124" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tilBarriaIceCave" x="64" y="448" w="64" h="64" xo="16" yo="320" id="10009142" name="tile_B7771496" depth="1999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -204,42 +212,42 @@ vector_path_add(oVectorLine,room1path1,0,0,0)</code>
     <tile bgName="tilBarriaInstallationInner" x="96" y="528" w="48" h="48" xo="0" yo="192" id="10009154" name="tile_07295A1B" depth="1001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilBarriaInstallationInner" x="96" y="576" w="48" h="48" xo="0" yo="192" id="10009155" name="tile_C4645604" depth="1001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilBarriaIceCave" x="128" y="304" w="16" h="16" xo="48" yo="336" id="10009156" name="tile_905CF842" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="320" y="416" w="32" h="32" xo="0" yo="0" id="10005658" name="tile_6D29B7FE" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="352" y="416" w="32" h="32" xo="0" yo="0" id="10005659" name="tile_97153574" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="384" y="416" w="32" h="32" xo="0" yo="0" id="10005660" name="tile_2E1603B0" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="416" y="416" w="32" h="32" xo="0" yo="0" id="10005661" name="tile_BE7246AD" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="448" y="416" w="32" h="32" xo="0" yo="0" id="10005662" name="tile_F46584C9" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="448" y="448" w="32" h="32" xo="0" yo="0" id="10005663" name="tile_2B20D052" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="416" y="448" w="32" h="32" xo="0" yo="0" id="10005664" name="tile_EB0D8608" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="384" y="448" w="32" h="32" xo="0" yo="0" id="10005665" name="tile_1AC3BF71" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="352" y="448" w="32" h="32" xo="0" yo="0" id="10005666" name="tile_1C2A6FC0" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="320" y="448" w="32" h="32" xo="0" yo="0" id="10005667" name="tile_6095D226" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="320" y="480" w="32" h="32" xo="0" yo="0" id="10005668" name="tile_7A56A6C7" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="352" y="480" w="32" h="32" xo="0" yo="0" id="10005669" name="tile_DB09935F" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="384" y="480" w="32" h="32" xo="0" yo="0" id="10005670" name="tile_D4EB37BC" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="416" y="480" w="32" h="32" xo="0" yo="0" id="10005671" name="tile_AA7093CA" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="448" y="480" w="32" h="32" xo="0" yo="0" id="10005673" name="tile_D21E542B" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="480" y="480" w="32" h="32" xo="0" yo="0" id="10005674" name="tile_1D3F1F27" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="480" y="448" w="32" h="32" xo="0" yo="0" id="10005675" name="tile_CFD079A3" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="480" y="416" w="32" h="32" xo="0" yo="0" id="10005676" name="tile_9F412CBD" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="480" y="384" w="32" h="32" xo="0" yo="0" id="10005677" name="tile_B8117C5A" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="448" y="384" w="32" h="32" xo="0" yo="0" id="10005678" name="tile_97E56093" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="416" y="384" w="32" h="32" xo="0" yo="0" id="10005679" name="tile_8B8F4E2C" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="384" y="384" w="32" h="32" xo="0" yo="0" id="10005680" name="tile_0EB9EB18" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="352" y="384" w="32" h="32" xo="0" yo="0" id="10005681" name="tile_E84AD790" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="352" y="352" w="32" h="32" xo="0" yo="0" id="10005682" name="tile_E54511D3" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="320" y="384" w="32" h="32" xo="0" yo="0" id="10005684" name="tile_6158F017" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="320" y="352" w="32" h="32" xo="0" yo="0" id="10005685" name="tile_D322CD47" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="320" y="320" w="32" h="32" xo="0" yo="0" id="10005686" name="tile_E09AD596" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="352" y="320" w="32" h="32" xo="0" yo="0" id="10005687" name="tile_C2ACAE6F" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="384" y="320" w="32" h="32" xo="0" yo="0" id="10005688" name="tile_93AF90CF" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="384" y="352" w="32" h="32" xo="0" yo="0" id="10005689" name="tile_1B878E3B" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="448" y="352" w="32" h="32" xo="0" yo="0" id="10005693" name="tile_4FF0F079" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="416" y="352" w="32" h="32" xo="0" yo="0" id="10005694" name="tile_AF9DBAC8" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="416" y="320" w="32" h="32" xo="0" yo="0" id="10005695" name="tile_A57CD348" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="448" y="320" w="32" h="32" xo="0" yo="0" id="10005696" name="tile_0B1ABA29" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="480" y="320" w="32" h="32" xo="0" yo="0" id="10005697" name="tile_F6714423" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grdSnow" x="480" y="352" w="32" h="32" xo="0" yo="0" id="10005698" name="tile_A4B1AB82" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="320" y="288" w="32" h="32" xo="0" yo="0" id="10005658" name="tile_6D29B7FE" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="352" y="288" w="32" h="32" xo="0" yo="0" id="10005659" name="tile_97153574" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="384" y="288" w="32" h="32" xo="0" yo="0" id="10005660" name="tile_2E1603B0" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="416" y="288" w="32" h="32" xo="0" yo="0" id="10005661" name="tile_BE7246AD" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="448" y="288" w="32" h="32" xo="0" yo="0" id="10005662" name="tile_F46584C9" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="448" y="320" w="32" h="32" xo="0" yo="0" id="10005663" name="tile_2B20D052" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="416" y="320" w="32" h="32" xo="0" yo="0" id="10005664" name="tile_EB0D8608" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="384" y="320" w="32" h="32" xo="0" yo="0" id="10005665" name="tile_1AC3BF71" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="352" y="320" w="32" h="32" xo="0" yo="0" id="10005666" name="tile_1C2A6FC0" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="320" y="320" w="32" h="32" xo="0" yo="0" id="10005667" name="tile_6095D226" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="320" y="352" w="32" h="32" xo="0" yo="0" id="10005668" name="tile_7A56A6C7" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="352" y="352" w="32" h="32" xo="0" yo="0" id="10005669" name="tile_DB09935F" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="384" y="352" w="32" h="32" xo="0" yo="0" id="10005670" name="tile_D4EB37BC" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="416" y="352" w="32" h="32" xo="0" yo="0" id="10005671" name="tile_AA7093CA" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="448" y="352" w="32" h="32" xo="0" yo="0" id="10005673" name="tile_D21E542B" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="480" y="352" w="32" h="32" xo="0" yo="0" id="10005674" name="tile_1D3F1F27" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="480" y="320" w="32" h="32" xo="0" yo="0" id="10005675" name="tile_CFD079A3" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="480" y="288" w="32" h="32" xo="0" yo="0" id="10005676" name="tile_9F412CBD" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="480" y="256" w="32" h="32" xo="0" yo="0" id="10005677" name="tile_B8117C5A" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="448" y="256" w="32" h="32" xo="0" yo="0" id="10005678" name="tile_97E56093" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="416" y="256" w="32" h="32" xo="0" yo="0" id="10005679" name="tile_8B8F4E2C" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="384" y="256" w="32" h="32" xo="0" yo="0" id="10005680" name="tile_0EB9EB18" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="352" y="256" w="32" h="32" xo="0" yo="0" id="10005681" name="tile_E84AD790" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="352" y="224" w="32" h="32" xo="0" yo="0" id="10005682" name="tile_E54511D3" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="320" y="256" w="32" h="32" xo="0" yo="0" id="10005684" name="tile_6158F017" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="320" y="224" w="32" h="32" xo="0" yo="0" id="10005685" name="tile_D322CD47" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="320" y="192" w="32" h="32" xo="0" yo="0" id="10005686" name="tile_E09AD596" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="352" y="192" w="32" h="32" xo="0" yo="0" id="10005687" name="tile_C2ACAE6F" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="384" y="192" w="32" h="32" xo="0" yo="0" id="10005688" name="tile_93AF90CF" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="384" y="224" w="32" h="32" xo="0" yo="0" id="10005689" name="tile_1B878E3B" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="448" y="224" w="32" h="32" xo="0" yo="0" id="10005693" name="tile_4FF0F079" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="416" y="224" w="32" h="32" xo="0" yo="0" id="10005694" name="tile_AF9DBAC8" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="416" y="192" w="32" h="32" xo="0" yo="0" id="10005695" name="tile_A57CD348" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="448" y="192" w="32" h="32" xo="0" yo="0" id="10005696" name="tile_0B1ABA29" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="480" y="192" w="32" h="32" xo="0" yo="0" id="10005697" name="tile_F6714423" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="grdSnow" x="480" y="224" w="32" h="32" xo="0" yo="0" id="10005698" name="tile_A4B1AB82" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

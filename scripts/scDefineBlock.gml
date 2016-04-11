@@ -1,6 +1,5 @@
 myid = argument0;
 depth = 10;
-
 switch (object_index)
 {
     case oBlock16:

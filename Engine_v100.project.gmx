@@ -75,6 +75,7 @@
       <sound>sound\IceBeamImpact1</sound>
       <sound>sound\IceBeamImpact2</sound>
       <sound>sound\IceBeamImpact3</sound>
+      <sound>sound\IceShatter</sound>
       <sound>sound\MissileExplosion</sound>
       <sound>sound\MissileFire</sound>
       <sound>sound\PowerBomb</sound>
@@ -152,26 +153,33 @@
         <sprite>sprites\sprWallLightW</sprite>
       </sprites>
       <sprites name="Obstructions">
-        <sprite>sprites\sprBlock16</sprite>
-        <sprite>sprites\sprBlock8</sprite>
-        <sprite>sprites\sprBasicBlock16</sprite>
-        <sprite>sprites\sprReformBlock16</sprite>
-        <sprite>sprites\sprBombBlock16</sprite>
-        <sprite>sprites\sprPowerBombBlock16</sprite>
-        <sprite>sprites\sprMissileBlock16</sprite>
-        <sprite>sprites\sprSuperMissileBlock16</sprite>
-        <sprite>sprites\sprSpeedBoosterBlock16</sprite>
-        <sprite>sprites\sprBasicBlock8</sprite>
-        <sprite>sprites\sprReformBlock8</sprite>
-        <sprite>sprites\sprBombBlock8</sprite>
-        <sprite>sprites\sprPowerBombBlock8</sprite>
-        <sprite>sprites\sprMissileBlock8</sprite>
-        <sprite>sprites\sprSuperMissileBlock8</sprite>
-        <sprite>sprites\sprSpeedBoosterBlock8</sprite>
-        <sprite>sprites\sprBlockBreak16</sprite>
-        <sprite>sprites\sprBlockBreak8</sprite>
-        <sprite>sprites\sprBlockReform16</sprite>
-        <sprite>sprites\sprBlockReform8</sprite>
+        <sprites name="Blocks">
+          <sprite>sprites\sprBlock16</sprite>
+          <sprite>sprites\sprBlock8</sprite>
+          <sprite>sprites\sprBasicBlock16</sprite>
+          <sprite>sprites\sprReformBlock16</sprite>
+          <sprite>sprites\sprBombBlock16</sprite>
+          <sprite>sprites\sprPowerBombBlock16</sprite>
+          <sprite>sprites\sprMissileBlock16</sprite>
+          <sprite>sprites\sprSuperMissileBlock16</sprite>
+          <sprite>sprites\sprSpeedBoosterBlock16</sprite>
+          <sprite>sprites\sprBasicBlock8</sprite>
+          <sprite>sprites\sprReformBlock8</sprite>
+          <sprite>sprites\sprBombBlock8</sprite>
+          <sprite>sprites\sprPowerBombBlock8</sprite>
+          <sprite>sprites\sprMissileBlock8</sprite>
+          <sprite>sprites\sprSuperMissileBlock8</sprite>
+          <sprite>sprites\sprSpeedBoosterBlock8</sprite>
+          <sprite>sprites\sprBlockBreak16</sprite>
+          <sprite>sprites\sprBlockBreak8</sprite>
+          <sprite>sprites\sprBlockReform16</sprite>
+          <sprite>sprites\sprBlockReform8</sprite>
+        </sprites>
+        <sprite>sprites\sprIceUD</sprite>
+        <sprite>sprites\sprIceLR</sprite>
+        <sprite>sprites\sprIceShatter</sprite>
+        <sprite>sprites\sprIceMelt</sprite>
+        <sprite>sprites\sprIcePart</sprite>
       </sprites>
       <sprites name="Other">
         <sprite>sprites\sprShip</sprite>
@@ -348,9 +356,6 @@
       <script>scripts\scDefineActor.gml</script>
       <script>scripts\scActorDeath.gml</script>
       <script>scripts\scActorStep.gml</script>
-      <scripts name="Actor Functions">
-        <script>scripts\scActorLoot.gml</script>
-      </scripts>
     </scripts>
     <scripts name="Engine Initialization">
       <script>scripts\GameInit.gml</script>
@@ -387,6 +392,9 @@
         <script>scripts\_ItemGlowLight.gml</script>
       </scripts>
     </scripts>
+    <scripts name="Loot System">
+      <script>scripts\scDropLoot.gml</script>
+    </scripts>
     <scripts name="Movement and Collision">
       <script>scripts\move_forward.gml</script>
       <script>scripts\move_forward_contact.gml</script>
@@ -407,6 +415,7 @@
       <script>scripts\scPlayerStepInput.gml</script>
       <script>scripts\scPlayerStepWeaponHandling.gml</script>
       <script>scripts\scPlayerEndStep.gml</script>
+      <script>scripts\scPlayerDraw.gml</script>
       <script>scripts\scPlayerWeaponControl.gml</script>
     </scripts>
     <scripts name="Projectile">
@@ -469,17 +478,10 @@
       <object>objects\pCollision</object>
     </objects>
     <objects name="Classes">
-      <objects name="Parents">
-        <object>objects\oBlockParent</object>
-        <object>objects\oDoorParent</object>
-        <object>objects\oLightParent</object>
-        <object>objects\oScanTargetParent</object>
-        <object>objects\oTransitionParent</object>
-      </objects>
       <object>objects\oActor</object>
       <object>objects\oDestroyAnim</object>
       <object>objects\oDestructible</object>
-      <object>objects\oDooDad</object>
+      <object>objects\oDoodad</object>
       <object>objects\oEffect</object>
       <object>objects\oExplosion</object>
       <object>objects\oFreezeAnim</object>
@@ -495,12 +497,17 @@
       <object>objects\oViewController</object>
     </objects>
     <objects name="Environment">
-      <object>objects\oDoorChanger</object>
-      <object>objects\oDoorGuideE</object>
-      <object>objects\oDoorGuideN</object>
-      <object>objects\oDoorGuideS</object>
-      <object>objects\oDoorGuideW</object>
+      <object>objects\oBlockParent</object>
+      <objects name="Doors">
+        <object>objects\oDoorParent</object>
+        <object>objects\oDoorChanger</object>
+        <object>objects\oDoorGuideE</object>
+        <object>objects\oDoorGuideN</object>
+        <object>objects\oDoorGuideS</object>
+        <object>objects\oDoorGuideW</object>
+      </objects>
       <objects name="Lights">
+        <object>objects\oLightParent</object>
         <object>objects\oLight</object>
         <object>objects\oDomeLight</object>
         <object>objects\oSmallLightEW</object>
@@ -517,11 +524,15 @@
       <objects name="Obstructions">
         <object>objects\oBlock16</object>
         <object>objects\oBlock8</object>
+        <object>objects\oIceParent</object>
+        <object>objects\oIceLR</object>
+        <object>objects\oIceUD</object>
       </objects>
       <objects name="Other">
         <object>objects\oShip</object>
       </objects>
       <objects name="Scannables and Details">
+        <object>objects\oScanTargetParent</object>
         <object>objects\oPCE</object>
         <object>objects\oPCW</object>
         <object>objects\oPCN</object>
@@ -547,6 +558,7 @@
       <object>objects\oPowerBombExplosion</object>
     </objects>
     <objects name="Transitions">
+      <object>objects\oTransitionParent</object>
       <object>objects\oTransitionTubeLR</object>
       <object>objects\oTransitionTubeUD</object>
     </objects>
@@ -556,7 +568,7 @@
     <rooms name="Barria">
       <room>rooms\BarriaLandingSite</room>
       <room>rooms\BarriaIntWest</room>
-      <room>rooms\BarriaCacheBallBomb</room>
+      <room>rooms\BarriaCacheMissile</room>
     </rooms>
     <rooms name="Generic Rooms">
       <room>rooms\NewRoomPalette</room>

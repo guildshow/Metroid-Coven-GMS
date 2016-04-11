@@ -17,7 +17,6 @@ enum Items
       iMorphBall, iBallBomb, iPowerBomb, iSpeedBooster, iLightsear,
       iMissileExpansion, iSuperMissileExpansion, iPowerBombExpansion,
       iEnergyTank, iAccelTank,
-      iMissileExpansion, iSuperMissileExpansion, iPowerBombExpansion,
       aSMissileAmmo, aLMissileAmmo, aSSuperMissileAmmo, aLSuperMissileAmmo, aPowerBombAmmo, 
       hHealthSmall, hHealthLarge, hHealthSuper }
 enum Doors
