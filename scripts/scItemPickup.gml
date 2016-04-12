@@ -1,31 +1,32 @@
 switch (myid)
 {
 // --- Beams ---
-    case Items.iWaveBeam: text = eId.GainWaveBeam; other.HasWaveBeam = true; break;
-    case Items.iPlasmaBeam: text = eId.GainPlasmaBeam; other.HasPlasmaBeam = true; break;
-    case Items.iSpazerBeam: text = eId.GainSpazerBeam; other.HasSpazerBeam = true; break;
-    case Items.iPulseBeam: text = eId.GainPulseBeam; other.HasPulseBeam = true; break;
-    case Items.iIceBeam: text = eId.GainIceBeam; other.HasIceBeam = true; break;
-    case Items.iRuptureBeam: text = eId.GainRuptureBeam; other.HasRuptureBeam = true; break;
-    case Items.iPhazonBeam: text = eId.GainPhazonBeam; other.HasPhazonBeam = true; break;
+    case Items.iWaveBeam: text = eId.GainWaveBeam; eId.HasWaveBeam = true; break;
+    case Items.iPlasmaBeam: text = eId.GainPlasmaBeam; eId.HasPlasmaBeam = true; break;
+    case Items.iSpazerBeam: text = eId.GainSpazerBeam; eId.HasSpazerBeam = true; break;
+    case Items.iPulseBeam: text = eId.GainPulseBeam; eId.HasPulseBeam = true; break;
+    case Items.iIceBeam: text = eId.GainIceBeam; eId.HasIceBeam = true; break;
+    case Items.iRuptureBeam: text = eId.GainRuptureBeam; eId.HasRuptureBeam = true; break;
+    case Items.iPhazonBeam: text = eId.GainPhazonBeam; eId.HasPhazonBeam = true; break;
 // --- Secondary Weapons ---
-    case Items.iMissileLauncher: text = eId.GainMissileLauncher; other.HasMissileLauncher = true; break;
-    case Items.iSuperMissile: text = eId.GainSuperMissile; other.HasSuperMissile = true; break;
-    case Items.iDiffuser: text = eId.GainDiffuser; other.HasDiffuser = true; break;
+    case Items.iMissileLauncher: text = eId.GainMissileLauncher; eId.HasMissileLauncher = true; break;
+    case Items.iSuperMissile: text = eId.GainSuperMissile; eId.HasSuperMissile = true; break;
+    case Items.iDiffuser: text = eId.GainDiffuser; eId.HasDiffuser = true; break;
 // --- Addons ---
-    case Items.iMorphBall: text = eId.GainMorphBall; other.HasMorphBall = true; break;
-    case Items.iBallBomb: text = eId.GainBallBomb; other.HasBallBomb = true; break;
-    case Items.iPowerBomb: text = eId.GainPowerBomb; other.HasPowerBomb = true; break;
-    case Items.iSpeedBooster: text = eId.GainSpeedBooster; other.HasSpeedBooster = true; break;
-    case Items.iLightsear: text = eId.GainLightsear; other.HasLightsear = true; break;
+    case Items.iMorphBall: text = eId.GainMorphBall; eId.HasMorphBall = true; break;
+    case Items.iBallBomb: text = eId.GainBallBomb; eId.HasBallBomb = true; break;
+    case Items.iPowerBomb: text = eId.GainPowerBomb; eId.HasPowerBomb = true; break;
+    case Items.iSpeedBooster: text = eId.GainSpeedBooster; eId.HasSpeedBooster = true; break;
+    case Items.iLightsear: text = eId.GainLightsear; eId.HasLightsear = true; break;
 // --- Suits ---
-    case Items.iVariaSuit: text = eId.GainVariaSuit; with (other) scDefineSuit(Other.sVariaSuit); break;
-    case Items.iGravitySuit: text = eId.GainGravitySuit; with (other) scDefineSuit(Other.sGravitySuit); break;
-    case Items.iCorruptionSuit: text = eId.GainCorruptionSuit; with (other) scDefineSuit(Other.sCorruptionSuit); break;
+    case Items.iVariaSuit: text = eId.GainVariaSuit; eId.HasVariaSuit = true; with (other) scDefineSuit(Other.sVariaSuit); break;
+    case Items.iGravitySuit: text = eId.GainGravitySuit; eId.HasGravitySuit = true; with (other) scDefineSuit(Other.sGravitySuit); break;
+    case Items.iCorruptionSuit: text = eId.GainCorruptionSuit; eId.HasPhazonSuit = true; with (other) scDefineSuit(Other.sCorruptionSuit); break;
 // --- Visors ---
     // N/A.
 // --- Expansions ---
     case Items.iEnergyTank:
+        scAcquireExpansion(1);
         with (other) // oPlayer.
         {
             other.text = eId.GainEnergyTank; // oItem.
@@ -35,6 +36,7 @@ switch (myid)
         }
         break;
     case Items.iMissileExpansion:
+        scAcquireExpansion(2);
         with (other) // oPlayer.
         {
             other.text = eId.GainMissileExpansion; // oItem.
@@ -44,6 +46,7 @@ switch (myid)
         }
         break;
     case Items.iSuperMissileExpansion:
+        scAcquireExpansion(3);
         with (other) // oPlayer.
         {
             other.text = eId.GainSuperMissileExpansion; // oItem.
@@ -53,6 +56,7 @@ switch (myid)
         }
         break;
     case Items.iPowerBombExpansion:
+        scAcquireExpansion(4);
         with (other) // oPlayer.
         {
             other.text = eId.GainPowerBombExpansion; // oItem.

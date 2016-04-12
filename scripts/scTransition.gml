@@ -11,7 +11,7 @@ switch (transstep)
     case 1:
         if (transbuffer < transbuffermax) transbuffer += 1;
         if (transbuffer = transbuffermax) 
-            { transstep = 2; room_goto(TransitionRoom); }
+            { transstep = 2; transbuffer = 0; room_goto(TransitionRoom); }
         break;
     case 2:
     // --- Part 2 ---
@@ -29,7 +29,7 @@ switch (transstep)
                     // If the distance to the offset is short, just snap it and move on.
                     if (point_distance(0,ty,0,voy) < transrate/4)
                         { ty = voy; transstep = 3; }
-                    // Otherwise, adjust the t-object until we ARE close enough.
+                    // Otherwise, adjust the t-object until we are close enough.
                     else
                     {
                         if (ty > voy) ty -= transrate/4;
@@ -63,9 +63,9 @@ switch (transstep)
                     { tx = 0; transstep = 4; }
                 break;
             case 90: // North.
-                if (ty < 640) ty += transrate;
-                if (ty >= 640)
-                    { ty = 640; transstep = 4; }
+                if (ty < 480) ty += transrate;
+                if (ty >= 480)
+                    { ty = 480; transstep = 4; }
                 break;
             case 180: // West.
                 if (tx < 640) tx += transrate;
@@ -87,7 +87,9 @@ switch (transstep)
         break;
     case 5:
         scTransIn();
-        transstep = 6;
+        if (transbuffer < transbuffermax) transbuffer += 1;
+        if (transbuffer = transbuffermax) 
+            { transstep = 6; transbuffer = 0; }
         break;
     case 6:
     // Fade back in and reset all of the variables.

@@ -16,12 +16,12 @@ if (MorphBall = false)
 else
 {
     // --- Drop Ball Bomb ---
-    if (KeyFireClickSpeed) and (ExistingBombs < 3) and (HasBallBomb)
+    if (KeyFireClickSpeed) and (ExistingBombs < 3) and (eId.HasBallBomb)
         { with (instance_create(x,y,oProjectile)) scDefineProjectile(Weapons.wBallBomb); }
     // --- Drop Morph Ball secondary weapon ---
     if (KeyChargePressed) 
     {
-        if (HasPowerBomb) 
+        if (eId.HasPowerBomb) 
         {
             if (CurrentMorphedSecondary = Weapons.wPowerBomb) and (ExistingPowerBombs > 0) exit;
             if (scWeaponGetAmmo(CurrentMorphedSecondary) > 0)

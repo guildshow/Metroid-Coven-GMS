@@ -1,5 +1,6 @@
 myid = argument0;
-
+mask_index = sprProjectileMaskDoorChecker;
+alarm[4] = 1;
 switch (myid)
 {
 // ===== Player Beams =====
@@ -293,7 +294,7 @@ switch (myid)
         {
             with (instance_create(xx,yy,oProjectile))
             {
-                direction = other.direction+random_range(oPlayer.WeaponAccuracy,oPlayer.WeaponAccuracy*-1);
+                direction = oPlayer.WeaponAim+random_range(oPlayer.WeaponAccuracy,oPlayer.WeaponAccuracy*-1);
                 image_angle = direction;
                 Charger = other.Charger;
                 sound_play(BeamPhazon);

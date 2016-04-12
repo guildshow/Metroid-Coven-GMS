@@ -2,7 +2,8 @@
 // This next set of blocks determines where the view will adjust when a transition occurs
 //   BEFORE and sliding across the view.
 // Variables vox and voy are where the transition object needs to be adjusted during a
-//   transition in relation to the view x and y.
+//   transition in relation to the view x and y. So, if the destination room's door is 128
+//   pixels from the top of the screen, we set voy to 128.
 // Variable transdir is the direction that the transition object will move across the screen
 //   plus 180 degrees.
 
@@ -10,17 +11,21 @@ if (other.object_index = oTransitionTubeLR)
 {
     if (x < other.x) eId.transdir = 0;
     else eId.transdir = 180;
+    /*
     if (other.y != room_height-128) and (other.y != 128)
         { eId.voy = point_distance(0,other.y,0,view_yview[0]); }
     else eId.voy = 0;
+    */
 }
 if (other.object_index = oTransitionTubeUD)
 {
     if (y < other.y) eId.transdir = 270;
     else eId.transdir = 90;
+    /*
     if (other.x != room_width-128) and (other.x != 128)
         { eId.vox = point_distance(other.x,0,view_xview[0],0); }
     else eId.vox = 0;
+    */
 }
 // Determine the room we need to move to.
 switch (room) // Determine current room.
@@ -31,5 +36,9 @@ switch (room) // Determine current room.
         break;
     case BarriaIntWest:
         if (other.trans = 1) eId.destinationroom = BarriaLandingSite;
+        if (other.trans = 3) eId.destinationroom = BarriaCacheMissile; eId.vox = 320;
+        break;
+    case BarriaCacheMissile:
+        if (other.trans = 3) eId.destinationroom = BarriaIntWest;
         break;
 }

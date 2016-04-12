@@ -4,19 +4,21 @@ switch (room) // Check current room.
     // Get the position of the transition object in the room.
     case BarriaLandingSite:
         // Set a variable (trans) to match with the target room's transition object.
-        trans = 1;
+        trans = 1; // To BarriaIntWest.
         break;
     case BarriaIntWest:
         if (sprite_index = sprTransitionGuideLR)
         {
-            if (x < room_width/2) trans = 1;
+            if (x < room_width/2) trans = 1; // To BarriaLandingSite.
             else trans = 4;
         }
         else
         {
             if (y < room_height/2) trans = 2;
-            else trans = 3;
+            else trans = 3; // To BarriaCacheMissile.
         }
-        //switch (trans)
+        break;
+    case BarriaCacheMissile:
+        trans = 3; // To BarriaIntWest.
         break;
 }

@@ -242,28 +242,28 @@ if (!debugmode) exit;
 if (!allitemsgiven) and (instance_exists(oPlayer))
 {
     allitemsgiven = 1;
+    
+    HasWaveBeam = true;
+    HasPlasmaBeam = true;
+    HasSpazerBeam = true;
+    HasPulseBeam = true;
+    HasIceBeam = true;
+    HasRuptureBeam = true;
+    HasPhazonBeam = true;
+    // ---
+    HasMissileLauncher = true;
+    HasSuperMissile = true;
+    HasDiffuser = true;
+    // ---
+    HasMorphBall = true;
+    HasBallBomb = true;
+    HasPowerBomb = true;
+    HasSpeedBooster = true;
+    HasLightsear = true;
+    // ---
     with (oPlayer)
     {
-        HasWaveBeam = true;
-        HasPlasmaBeam = true;
-        HasSpazerBeam = true;
-        HasPulseBeam = true;
-        HasIceBeam = true;
-        HasRuptureBeam = true;
-        HasPhazonBeam = true;
-        // ---
-        HasMissileLauncher = true;
-        HasSuperMissile = true;
-        HasDiffuser = true;
-        // ---
-        HasMorphBall = true;
-        HasBallBomb = true;
-        HasPowerBomb = true;
-        HasSpeedBooster = true;
-        HasLightsear = true;
-        // ---
         scDefineSuit(Other.sCorruptionSuit);
-        // ---
         EnergyTanks = 12;
         FullTanks = EnergyTanks;
         Energy = 100;

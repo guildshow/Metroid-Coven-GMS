@@ -1,44 +1,52 @@
+depth = 6;
 myid = argument0;
 switch (myid)
 {
 // --- Beams ---
     case Items.iWaveBeam:
+        if (eId.HasWaveBeam) instance_destroy();
         AnimationStart = 0;
         AnimationEnd   = 1;
         StepSpeed      = 3;
         Name = "Wave Beam";
         break;
     case Items.iPlasmaBeam:
+        if (eId.HasPlasmaBeam) instance_destroy();
         AnimationStart = 2;
         AnimationEnd   = 3;
         StepSpeed      = 3;
         Name = "Plasma Beam";
         break;
     case Items.iSpazerBeam:
+        if (eId.HasSpazerBeam) instance_destroy();
         AnimationStart = 4;
         AnimationEnd   = 5;
         StepSpeed      = 3;
         Name = "Spazer Beam";
         break;
     case Items.iPulseBeam:
+        if (eId.HasPulseBeam) instance_destroy();
         AnimationStart = 6;
         AnimationEnd   = 7;
         StepSpeed      = 3;
         Name = "Pulse Beam";
         break;
     case Items.iIceBeam:
+        if (eId.HasIceBeam) instance_destroy();
         AnimationStart = 8;
         AnimationEnd   = 9;
         StepSpeed      = 3;
         Name = "Ice Beam";
         break;
     case Items.iRuptureBeam:
+        if (eId.HasRuptureBeam) instance_destroy();
         AnimationStart = 10;
         AnimationEnd   = 11;
         StepSpeed      = 3;
         Name = "Rupture Beam";
         break;
     case Items.iPhazonBeam:
+        if (eId.HasPhazonBeam) instance_destroy();
         AnimationStart = 12;
         AnimationEnd   = 13;
         StepSpeed      = 3;
@@ -46,18 +54,21 @@ switch (myid)
         break;
 // --- Secondary Weapons ---
     case Items.iMissileLauncher:
+        if (eId.HasMissileLauncher) instance_destroy();
         AnimationStart = 14;
         AnimationEnd   = 15;
         StepSpeed      = 3;
         Name = "Missile Launcher";
         break;
     case Items.iSuperMissile:
+        if (eId.HasSuperMissile) instance_destroy();
         AnimationStart = 16;
         AnimationEnd   = 17;
         StepSpeed      = 3;
         Name = "Super Missile";
         break;
     case Items.iDiffuser:
+        if (eId.HasDiffuser) instance_destroy();
         AnimationStart = 18;
         AnimationEnd   = 19;
         StepSpeed      = 3;
@@ -65,18 +76,21 @@ switch (myid)
         break;
 // --- Suits ---
     case Items.iVariaSuit:
+        if (eId.HasVariaSuit) instance_destroy();
         AnimationStart = 20;
         AnimationEnd   = 21;
         StepSpeed      = 3;
         Name = "Varia Suit";
         break;
     case Items.iGravitySuit:
+        if (eId.HasGravitySuit) instance_destroy();
         AnimationStart = 22;
         AnimationEnd   = 23;
         StepSpeed      = 3;
         Name = "Gravity Suit";
         break;
     case Items.iCorruptionSuit:
+        if (eId.HasCorruptionSuit) instance_destroy();
         AnimationStart = 24;
         AnimationEnd   = 25;
         StepSpeed      = 3;
@@ -84,6 +98,7 @@ switch (myid)
         break;
 // --- Addons ---
     case Items.iMorphBall:
+        if (eId.HasMorphBall) instance_destroy();
         AnimationStart = 26;
         AnimationEnd   = 30;
         StepSpeed      = 2;
@@ -92,6 +107,7 @@ switch (myid)
         Name = "Morph Ball";
         break;
     case Items.iBallBomb:
+        if (eId.HasBallBomb) instance_destroy();
         AnimationStart = 31;
         AnimationEnd   = 35;
         StepSpeed      = 4;
@@ -100,18 +116,21 @@ switch (myid)
         Name = "Ball Bomb";
         break;
     case Items.iPowerBomb:
+        if (eId.HasPowerBomb) instance_destroy();
         AnimationStart = 36;
         AnimationEnd   = 37;
         StepSpeed      = 3;
         Name = "Power Bomb";
         break;
     case Items.iSpeedBooster:
+        if (eId.HasSpeedBooster) instance_destroy();
         AnimationStart = 40;
         AnimationEnd   = 41;
         StepSpeed      = 3;
         Name = "Speed Booster";
         break;
     case Items.iLightsear:
+        if (eId.HasLightsear) instance_destroy();
         AnimationStart = 42;
         AnimationEnd   = 43;
         StepSpeed      = 3;
@@ -119,24 +138,28 @@ switch (myid)
         break;
 // --- Expansions ---
     case Items.iEnergyTank:
+        scCheckAcquired(1);
         AnimationStart = 52;
         AnimationEnd   = 53;
         StepSpeed      = 3;
         Name = "Energy Tank";
         break;
     case Items.iMissileExpansion:
+        scCheckAcquired(2);
         AnimationStart = 14;
         AnimationEnd   = 15;
         StepSpeed      = 3;
         Name = "Missile Expansion";
         break;
     case Items.iSuperMissileExpansion:
+        scCheckAcquired(3);
         AnimationStart = 16;
         AnimationEnd   = 17;
         StepSpeed      = 3;
         Name = "Super Missile Expansion";
         break;
     case Items.iPowerBombExpansion:
+        scCheckAcquired(4);
         AnimationStart = 36;
         AnimationEnd   = 37;
         StepSpeed      = 3;

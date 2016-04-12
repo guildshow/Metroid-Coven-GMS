@@ -1,7 +1,7 @@
 // Don't run if player object does not exist.
 if (instance_exists(oPlayer))
 {
-    if (random(3) <= 1) and (oPlayer.HasMissileLauncher = true)
+    if (random(3) <= 1) and (eId.HasMissileLauncher = true)
     {
         with (instance_create(x,y,oItem))
         {

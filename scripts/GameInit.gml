@@ -46,14 +46,47 @@ transfaderate = 0.025; // The rate at which the screen fades out during a transi
 transdone = false; // Checks if the transition is finished.
 transstep = -1; // Current stage of the transition
 transbuffer = 0; // Delay counter for transitions before continuing.
-transbuffermax = 15; // Length of delay for transitions before continuing to next step.
+transbuffermax = 10; // Length of delay for transitions before continuing to next step.
 transdir = 0; // Direction we move the t-object once were in the transition room.
-transrate = 8; // Rate at which t-objects move across the screen during a transition.
+transrate = 10; // Rate at which t-objects move across the screen during a transition.
 tsx = 0; // Location to place player after a transition is done.
 tsy = 0; // ^
 vox = 0; // Amount we need to adjust the t-object before moving it across the view.
 voy = 0; // ^
 
+// Initialize items.
+// --- Beams ---
+HasPowerBeam = true;
+HasWaveBeam = false;
+HasPlasmaBeam = false;
+HasSpazerBeam = false;
+HasPulseBeam = false;
+HasIceBeam = false;
+HasRuptureBeam = false;
+HasPhazonBeam = false;
+// --- Secondary Weapons ---
+HasMissileLauncher = false;
+HasSuperMissile = false;
+HasDiffuser = false;
+// --- Addons ---
+HasArmCannon = true;
+HasMorphBall = false;
+HasBallBomb = false;
+HasPowerBomb = false;
+HasSpeedBooster = false;
+HasLightsear = false;
+// --- Suits ---
+HasPowerSuit = true;
+HasVariaSuit = false;
+HasGravitySuit = false;
+HasCorruptionSuit = false;
+// --- Visors ---
+HasCombatVisor = true;
+HasScanVisor = true;
+HasXRayVisor = false;
+scDefineExpansions(); // Initialize expansions to prevent re-acquisitions.
+
 // Initialize miscellaneous stuff.
+scDefineNBDoor(); // Initialize non-blue doors to prevent re-opening.
 window_set_cursor(cr_none); // Hide the mouse cursor because we use our own.
 sound_global_volume(1); // Master volume control.

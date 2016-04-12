@@ -246,6 +246,7 @@
       <sprite>sprites\sprScanVisor</sprite>
     </sprites>
     <sprites name="Projectiles and Weapons">
+      <sprite>sprites\sprProjectileMaskDoorChecker</sprite>
       <sprite>sprites\sprCharging1</sprite>
       <sprite>sprites\sprCharging2</sprite>
       <sprite>sprites\sprCharging3</sprite>
@@ -323,6 +324,8 @@
     <paths name="Barria">
       <path>paths\BarriaLandingSitePath1</path>
       <path>paths\BarriaIntWestPath1</path>
+      <path>paths\BarriaCacheMissilePath1</path>
+      <path>paths\BarriaCacheMissilePath2</path>
     </paths>
     <paths name="room0">
       <path>paths\room0path1</path>
@@ -337,7 +340,6 @@
     <paths name="room1">
       <path>paths\room1path1</path>
     </paths>
-    <path>paths\path10</path>
   </paths>
   <scripts name="scripts">
     <scripts name="- Miscellaneous">
@@ -360,24 +362,33 @@
     <scripts name="Engine Initialization">
       <script>scripts\GameInit.gml</script>
       <script>scripts\scEIDMasterList.gml</script>
-      <script>scripts\scEIDGetRegion.gml</script>
       <script>scripts\scEIDStep.gml</script>
       <script>scripts\scEIDEndStep.gml</script>
       <script>scripts\scEIDMessagesInit.gml</script>
       <script>scripts\scEIDDraw.gml</script>
-      <script>scripts\RoomInit.gml</script>
     </scripts>
     <scripts name="Environment">
-      <script>scripts\scLightInit.gml</script>
-      <script>scripts\scLightCircle.gml</script>
-      <script>scripts\scRevealCircle.gml</script>
-      <script>scripts\scDefineDoor.gml</script>
-      <script>scripts\scDoorStep.gml</script>
-      <script>scripts\scDoorHit.gml</script>
-      <script>scripts\scDrawDoor.gml</script>
-      <script>scripts\scDefineBlock.gml</script>
-      <script>scripts\scBlockHit.gml</script>
-      <script>scripts\scBlockDeath.gml</script>
+      <scripts name="Blocks">
+        <script>scripts\scDefineBlock.gml</script>
+        <script>scripts\scBlockHit.gml</script>
+        <script>scripts\scBlockDeath.gml</script>
+      </scripts>
+      <scripts name="Doors">
+        <script>scripts\scDefineDoor.gml</script>
+        <script>scripts\scDoorStep.gml</script>
+        <script>scripts\scDoorHit.gml</script>
+        <script>scripts\scDrawDoor.gml</script>
+        <scripts name="Non-blue Door Handling">
+          <script>scripts\scDefineNBDoor.gml</script>
+          <script>scripts\scOpenNBDoor.gml</script>
+          <script>scripts\scCheckNBDoor.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="Lights">
+        <script>scripts\scLightInit.gml</script>
+        <script>scripts\scLightCircle.gml</script>
+        <script>scripts\scRevealCircle.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Inventory">
       <script>scripts\scSwitchSuit.gml</script>
@@ -386,6 +397,11 @@
       <script>scripts\scDefineItem.gml</script>
       <script>scripts\scItemPickup.gml</script>
       <script>scripts\scItemAlarm.gml</script>
+      <scripts name="Tank/Expansion Handling">
+        <script>scripts\scDefineExpansions.gml</script>
+        <script>scripts\scAcquireExpansion.gml</script>
+        <script>scripts\scCheckAcquired.gml</script>
+      </scripts>
       <scripts name="Item Behaviors">
         <script>scripts\_ItemFlash.gml</script>
         <script>scripts\_ItemPauseAnimation.gml</script>
@@ -428,6 +444,8 @@
       </scripts>
     </scripts>
     <scripts name="Transitions">
+      <script>scripts\RoomInit.gml</script>
+      <script>scripts\scEIDGetRegion.gml</script>
       <script>scripts\scTransGetLoc.gml</script>
       <script>scripts\scTransOut.gml</script>
       <script>scripts\scTransition.gml</script>

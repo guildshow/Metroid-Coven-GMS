@@ -5,36 +5,6 @@ FullTanks = 0;
 GainEnergy = 0;
 Accel = 1;
 
-// --- Beams ---
-HasPowerBeam = true;
-HasWaveBeam = false;
-HasPlasmaBeam = false;
-HasSpazerBeam = false;
-HasPulseBeam = false;
-HasIceBeam = false;
-HasRuptureBeam = false;
-HasPhazonBeam = false;
-// --- Secondary Weapons ---
-HasMissileLauncher = false;
-HasSuperMissile = false;
-HasDiffuser = false;
-// --- Addons ---
-HasArmCannon = true;
-HasMorphBall = false;
-HasBallBomb = false;
-HasPowerBomb = false;
-HasSpeedBooster = false;
-HasLightsear = false;
-// --- Suits ---
-HasPowerSuit = true;
-HasVariaSuit = false;
-HasGravitySuit = false;
-HasCorruptionSuit = false;
-// --- Visors ---
-HasCombatVisor = true;
-HasScanVisor = true;
-HasXRayVisor = false;
-
 //Starting ammo amounts.
 scWeaponInitValues(Weapons.wMissileLauncher,10);
 scWeaponInitValues(Weapons.wSuperMissile,3);

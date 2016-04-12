@@ -18,19 +18,19 @@ if (instance_exists(oPlayer))
     // ---
     var mh,height2; //mh = "Measured Heat" = the player's Plasma Beam heat level measured into the height of the bar sprite.
     mh = 1.33*oPlayer.Heat;
-    if (oPlayer.HasPlasmaBeam) and (oPlayer.Heat > 0) draw_sprite_part_ext(sprHUDHeatBar,0,0,133-mh,57,mh,vx+57,vy+322+133-mh,1,1,c_white,1);
+    if (eId.HasPlasmaBeam) and (oPlayer.Heat > 0) draw_sprite_part_ext(sprHUDHeatBar,0,0,133-mh,57,mh,vx+57,vy+322+133-mh,1,1,c_white,1);
     // ---
     /*var mc,height3; //mc = "Measured Charge" = the player's charge beam level measured into the height of the bar sprite.
     mc = 0.92*oPlayer.Charger;
     height3 = (mc*100)-mc;
     draw_sprite_part_ext(sprHUDChargeBar,0,0,92-mc,15,height3,vx+50,vy+211+92-mc,1,1,c_white,1);
-    if (oPlayer.HasPhazonBeam) draw_sprite(sprHUDPhazonBar,0,vx+575,vy+211);
+    if (eId.HasPhazonBeam) draw_sprite(sprHUDPhazonBar,0,vx+575,vy+211);
     // ---
     var mc,height4; //mc = "Measured Charge" = the player's charge beam level measured into the height of the bar sprite.
     mc = 0.92*oPlayer.Charger;
     height4 = (mc*100)-mc;
     draw_sprite_part_ext(sprHUDChargeBar,0,0,92-mc,15,height4,vx+50,vy+211+92-mc,1,1,c_white,1);
-    if (oPlayer.HasLightsear) draw_sprite(sprHUDLightsearBar,0,vx+526,vy+322);*/
+    if (eId.HasLightsear) draw_sprite(sprHUDLightsearBar,0,vx+526,vy+322);*/
 }
 //Draw accents.
 draw_sprite(sprHUDAccentTop,0,vx+154,vy+5);
@@ -89,7 +89,7 @@ draw_sprite(sprHUDBeam,beam,vx+39,vy+45);
 //Draw Ball Bomb counter.
 if (instance_exists(oPlayer))
 {
-    if (oPlayer.HasBallBomb)
+    if (eId.HasBallBomb)
     {
         switch (oPlayer.ExistingBombs)
         {
@@ -100,7 +100,7 @@ if (instance_exists(oPlayer))
         draw_sprite(sprHUDAddonBombs,0,vx+98,vy+42);
     }
 //Missile Launcher indicator and ammo counter.
-    if (oPlayer.HasMissileLauncher)
+    if (eId.HasMissileLauncher)
     {
         draw_sprite(sprHUDSecondaryMissile,0,vx+38,vy+103);
         if (oPlayer.CurrentUnmorphedSecondary = Weapons.wMissileLauncher) MissileLauncherAlpha = 1;
@@ -121,7 +121,7 @@ if (instance_exists(oPlayer))
         if (d3 < 10) draw_sprite(sprTextSkewed,d3,vx+591,vy+115);
     }
 //Super Missile indicator and ammo counter.
-    if (oPlayer.HasSuperMissile)
+    if (eId.HasSuperMissile)
     {
         draw_sprite(sprHUDSecondarySuperMissile,0,vx+38,vy+132);
         if (oPlayer.CurrentUnmorphedSecondary = Weapons.wSuperMissile) SuperMissileAlpha = 1;
@@ -142,7 +142,7 @@ if (instance_exists(oPlayer))
         if (e3 < 10) draw_sprite(sprTextSkewed,e3,vx+591,vy+137);
     }
 //Power Bomb ammo counter.
-    if (oPlayer.HasPowerBomb)
+    if (eId.HasPowerBomb)
     {
         draw_sprite(sprHUDAmmoIcons,2,vx+520,vy+148);
         f1 = 10;
@@ -159,11 +159,11 @@ if (instance_exists(oPlayer))
         if (f3 < 10) draw_sprite(sprTextSkewed,f3,vx+591,vy+159);
     }
 //Plasma Beam heat indicator and text.
-    if (oPlayer.HasPlasmaBeam) draw_sprite(sprHUDTextHeat,0,vx+43,vy+334);
+    if (eId.HasPlasmaBeam) draw_sprite(sprHUDTextHeat,0,vx+43,vy+334);
 //Phazon reserves bar and text.
-    if (oPlayer.HasPhazonBeam) draw_sprite(sprHUDTextPhazon,0,vx+595,vy+205);
+    if (eId.HasPhazonBeam) draw_sprite(sprHUDTextPhazon,0,vx+595,vy+205);
 //Lightsear cooldown timer and text.
-    if (oPlayer.HasLightsear) draw_sprite(sprHUDTextLightsear,0,vx+553,vy+346);
+    if (eId.HasLightsear) draw_sprite(sprHUDTextLightsear,0,vx+553,vy+346);
 }
 
 // ----------

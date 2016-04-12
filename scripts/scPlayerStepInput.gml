@@ -31,7 +31,7 @@ KeyDodge             = keyboard_check_pressed(vk_space);
 KeyDodgeHold         = keyboard_check(vk_space);
 KeyTorch             = keyboard_check_pressed(ord("F"));
 
-if (KeyMorph = true) and (HasMorphBall = true) and (!Overheated)
+if (KeyMorph = true) and (eId.HasMorphBall = true) and (!Overheated)
 {
     if (MorphBall) and (collision_circle(x,y,8,oBlockParent,true,false)) exit;
     MorphBall = !MorphBall;

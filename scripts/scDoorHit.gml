@@ -35,6 +35,7 @@ switch (argument1.myid)
             { sound_play(DoorHit); argument1.damage = true; }
         if (argument1.en <= 0)
         {
+            scOpenNBDoor(1);
             dc = instance_create(xx,yy,oDoorChanger);
             dc.image_angle = dir;
             dc.myid = Doors.dBlue;
@@ -44,6 +45,7 @@ switch (argument1.myid)
         break;
     case Doors.dGreen:
         if (hit != 3) exit;
+        scOpenNBDoor(2);
         dc = instance_create(xx,yy,oDoorChanger);
         dc.image_angle = dir;
         dc.myid = Doors.dBlue;
@@ -52,6 +54,7 @@ switch (argument1.myid)
         break;
     case Doors.dYellow:
         if (hit != 5) exit;
+            scOpenNBDoor(3);
         dc = instance_create(xx,yy,oDoorChanger);
         dc.image_angle = dir;
         dc.myid = Doors.dBlue;
