@@ -151,6 +151,10 @@
         <sprite>sprites\sprWallLightN</sprite>
         <sprite>sprites\sprWallLightS</sprite>
         <sprite>sprites\sprWallLightW</sprite>
+        <sprite>sprites\sprStickLightE</sprite>
+        <sprite>sprites\sprStickLightN</sprite>
+        <sprite>sprites\sprStickLightS</sprite>
+        <sprite>sprites\sprStickLightW</sprite>
       </sprites>
       <sprites name="Obstructions">
         <sprites name="Blocks">
@@ -538,6 +542,10 @@
         <object>objects\oWallLightN</object>
         <object>objects\oWallLightS</object>
         <object>objects\oWallLightW</object>
+        <object>objects\oStickLightE</object>
+        <object>objects\oStickLightN</object>
+        <object>objects\oStickLightW</object>
+        <object>objects\oStickLightS</object>
       </objects>
       <objects name="Obstructions">
         <object>objects\oBlock16</object>
@@ -586,6 +594,7 @@
     <rooms name="Barria">
       <room>rooms\BarriaLandingSite</room>
       <room>rooms\BarriaIntWest</room>
+      <room>rooms\BarriaIceTunnelN</room>
       <room>rooms\BarriaCacheMissile</room>
     </rooms>
     <rooms name="Generic Rooms">

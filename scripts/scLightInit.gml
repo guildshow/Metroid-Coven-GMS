@@ -12,6 +12,12 @@ switch (object_index)
     case oDomeLight:
         size = .1; angle = random(360);
         break;
+    case oStickLightE:
+    case oStickLightN:
+    case oStickLightS:
+    case oStickLightW:
+        size = .05; image_angle = random_range(-3,3); angle = random(360);
+        break;
     // --------
     case oSmallLightEW:
         xsize = .7; ysize = 1; size = .1; angle = 0;
