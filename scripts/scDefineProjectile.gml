@@ -375,6 +375,7 @@ switch (myid)
         Damage = 0;
         if (instance_exists(oPlayer)) oPlayer.ExistingBombs += 1;
         sprite_index = sprBallBomb;
+        mask_index = sprite_index;
         DiesOnContact = false;
         sound_play(BombLay);
         _ProjectileLight(.2,c_white,make_color_rgb(94,174,255),.4);
@@ -388,6 +389,7 @@ switch (myid)
         Damage = 0;
         if (instance_exists(oPlayer)) oPlayer.ExistingPowerBombs += 1;
         sprite_index = sprPowerBomb;
+        mask_index = sprite_index;
         DiesOnContact = false;
         sound_play(BombLay);
         _ProjectileLight(.2,c_white,c_red,.4);

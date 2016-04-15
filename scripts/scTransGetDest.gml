@@ -11,21 +11,11 @@ if (other.object_index = oTransitionTubeLR)
 {
     if (x < other.x) eId.transdir = 0;
     else eId.transdir = 180;
-    /*
-    if (other.y != room_height-128) and (other.y != 128)
-        { eId.voy = point_distance(0,other.y,0,view_yview[0]); }
-    else eId.voy = 0;
-    */
 }
 if (other.object_index = oTransitionTubeUD)
 {
     if (y < other.y) eId.transdir = 270;
     else eId.transdir = 90;
-    /*
-    if (other.x != room_width-128) and (other.x != 128)
-        { eId.vox = point_distance(other.x,0,view_xview[0],0); }
-    else eId.vox = 0;
-    */
 }
 // Determine the room we need to move to.
 switch (room) // Determine current room.
@@ -36,9 +26,16 @@ switch (room) // Determine current room.
         break;
     case BarriaIntWest:
         if (other.trans = 1) eId.destinationroom = BarriaLandingSite;
-        if (other.trans = 3) eId.destinationroom = BarriaCacheMissile; eId.vox = 320;
+        if (other.trans = 2)
+            { eId.destinationroom = BarriaIceTunnelN; eId.vox = 320; }
+        if (other.trans = 3)
+            { eId.destinationroom = BarriaCacheMissile; eId.vox = 320; }
         break;
     case BarriaCacheMissile:
         if (other.trans = 3) eId.destinationroom = BarriaIntWest;
+        break;
+    case BarriaIceTunnelN:
+        if (other.trans = 2)
+            { eId.destinationroom = BarriaIntWest; eId.vox = 320; }
         break;
 }

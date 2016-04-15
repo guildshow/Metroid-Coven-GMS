@@ -115,11 +115,18 @@
     <sprites name="Enemies">
       <sprite>sprites\sprBadGuySpawner</sprite>
       <sprites name="Zoomer">
-        <sprite>sprites\sprZoomerDie</sprite>
-        <sprite>sprites\sprZoomerPart</sprite>
         <sprite>sprites\sprZoomer</sprite>
         <sprite>sprites\sprZoomerHit</sprite>
+        <sprite>sprites\sprZoomerDie</sprite>
+        <sprite>sprites\sprZoomerPart</sprite>
         <sprite>sprites\sprZoomerBlood</sprite>
+      </sprites>
+      <sprites name="Gamet">
+        <sprite>sprites\sprGamet</sprite>
+        <sprite>sprites\sprGametHit</sprite>
+        <sprite>sprites\sprGametDie</sprite>
+        <sprite>sprites\sprGametPart</sprite>
+        <sprite>sprites\sprGametBlood</sprite>
       </sprites>
     </sprites>
     <sprites name="Environment">
@@ -330,6 +337,10 @@
       <path>paths\BarriaIntWestPath1</path>
       <path>paths\BarriaCacheMissilePath1</path>
       <path>paths\BarriaCacheMissilePath2</path>
+      <path>paths\BarriaIceTunnelNPath1</path>
+      <path>paths\BarriaIceTunnelNPath2</path>
+      <path>paths\BarriaIceTunnelNPath3</path>
+      <path>paths\BarriaIceTunnelNPath4</path>
     </paths>
     <paths name="room0">
       <path>paths\room0path1</path>
@@ -447,7 +458,7 @@
         <script>scripts\_ProjectileLight.gml</script>
       </scripts>
     </scripts>
-    <scripts name="Transitions">
+    <scripts name="Rooms and Transitions">
       <script>scripts\RoomInit.gml</script>
       <script>scripts\scEIDGetRegion.gml</script>
       <script>scripts\scTransGetLoc.gml</script>
@@ -515,7 +526,6 @@
       <object>objects\eId</object>
       <object>objects\oLE</object>
       <object>objects\oActorSpawner</object>
-      <object>objects\cLevelController</object>
       <object>objects\oViewController</object>
     </objects>
     <objects name="Environment">
@@ -593,8 +603,8 @@
     <room>rooms\InitRoom</room>
     <rooms name="Barria">
       <room>rooms\BarriaLandingSite</room>
-      <room>rooms\BarriaIntWest</room>
       <room>rooms\BarriaIceTunnelN</room>
+      <room>rooms\BarriaIntWest</room>
       <room>rooms\BarriaCacheMissile</room>
     </rooms>
     <rooms name="Generic Rooms">

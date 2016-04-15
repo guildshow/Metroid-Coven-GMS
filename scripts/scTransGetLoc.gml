@@ -14,11 +14,23 @@ switch (room) // Check current room.
         }
         else
         {
-            if (y < room_height/2) trans = 2;
+            if (y < room_height/2) trans = 2; // To BarriaIceTunnelN.
             else trans = 3; // To BarriaCacheMissile.
         }
         break;
     case BarriaCacheMissile:
         trans = 3; // To BarriaIntWest.
+        break;
+    case BarriaIceTunnelN:
+        if (sprite_index = sprTransitionGuideLR)
+        {
+            if (x < room_width/2) trans = 1; // To TBD.
+            else trans = 4; // To BarriaResupN.
+        }
+        else
+        {
+            if (y < room_height/2) trans = 3; // To BarriaCacheMorphBall.
+            else trans = 2; // To BarriaIntWest.
+        }
         break;
 }

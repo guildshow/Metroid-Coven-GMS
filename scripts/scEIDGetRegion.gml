@@ -5,6 +5,7 @@ switch (room)
     case BarriaLandingSite:
     case BarriaIntWest:
     case BarriaCacheMissile:
+    case BarriaIceTunnelN:
         region = 1; break;
     default: region = 0; break;
 }

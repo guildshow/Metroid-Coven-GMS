@@ -10,6 +10,7 @@ scEIDMessagesInit(); // Init the various messages of the game.
 debugmode = 0; // In-game debugmode toggle.
 allitemsgiven = 0; // determines if all items have been given to the player via debugmode.
 region = 0; // Determines what region we are in.
+fullscreen = 0; // Determines whether the game is in fullscreen or not.
 
 // Initialize pause and message stuff.
 sPause = noone; // The background sprite that draws when paused
@@ -27,7 +28,9 @@ scan = 0; // Scan variant.
 reveal = false; // Used to tell all lights in the game whether or not to reveal hidden areas in oHideMap.
 hiddenfade = 0; // For cleanly fading lights in and out in hidden areas.
 hiddenfade2 = 0; // ^
-range = 20; // Universal setting for the radius of all lights in the game.
+range = 20; // Universal setting for the radius of all reveal circles in the game.
+brightness = 1; // Universal setting for the radius of all lights in the game.
+                // Takes the base size of any light and multiplies by this number.
 
 // Initialize player variables.
 visor = 0; // 0 = Combat, 1 = Scan.

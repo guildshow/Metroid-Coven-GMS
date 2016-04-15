@@ -69,7 +69,6 @@ vector_path_add(oVectorLine,room1path1,0,0,0)</code>
     <instance objName="oDoorGuideW" x="64" y="160" name="inst_2860FB8E" locked="0" code="scDefineDoor(Doors.dRed);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoorGuideW" x="64" y="224" name="inst_CD4A3AC8" locked="0" code="scDefineDoor(Doors.dGreen);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoorGuideW" x="64" y="288" name="inst_32B6BE39" locked="0" code="scDefineDoor(Doors.dYellow);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cLevelController" x="16" y="0" name="inst_0306AD22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oTestItemSpawner" x="224" y="160" name="inst_CE274E12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock16" x="96" y="352" name="inst_0C0E576E" locked="0" code="scDefineBlock(Blocks.bReform);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock16" x="128" y="352" name="inst_C44C2B8A" locked="0" code="scDefineBlock(Blocks.bBomb);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

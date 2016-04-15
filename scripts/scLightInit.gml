@@ -53,14 +53,14 @@ switch (object_index)
         break;
 }
 light1 = instance_create(ox,oy,oLight);
-light1.image_xscale = mastersize*size*xsize;
-light1.image_yscale = mastersize*size*ysize;
+light1.image_xscale = mastersize*size*xsize*eId.brightness;
+light1.image_yscale = mastersize*size*ysize*eId.brightness;
 light1.image_blend = image_blend;
 light1.image_angle = angle;
 light2 = instance_create(ox,oy,oLight);
 light2.sprite_index = sprLightEffectBright;
 light2.HasAmbient = 0;
-light2.image_xscale = mastersize*size*xsize*.2;
-light2.image_yscale = mastersize*size*ysize*.2;
+light2.image_xscale = mastersize*size*xsize*.2*eId.brightness;
+light2.image_yscale = mastersize*size*ysize*.2*eId.brightness;
 light2.image_blend = image_blend;
 light2.image_angle = angle;
