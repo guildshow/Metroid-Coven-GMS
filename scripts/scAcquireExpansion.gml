@@ -10,6 +10,7 @@ switch (argument0)
     case 2:
         if (room = BarriaLandingSite) eId.HasBarriaLandingSiteME = true;
         if (room = BarriaCacheMissile) eId.HasBarriaCacheMissileME = true;
+        if (room = BarriaIceTunnelN) eId.HasBarriaIceTunnelNME = true;
         break;
     // --- Super Missile Expansions ---
     case 3:

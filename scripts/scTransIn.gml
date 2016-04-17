@@ -3,7 +3,7 @@ if (instance_exists(oTransitionParent))
     with (oTransitionParent)
     {
         if (trans = eId.trans)
-        { eId.tsx = x; eId.tsy = y; } // Get the position of the target transition object.
+            { eId.tsx = x; eId.tsy = y; } // Get the position of the target transition object.
     }
 }
 switch (transdir)
@@ -13,16 +13,6 @@ switch (transdir)
     case 180: tsx -= 72; break;
     case 270: tsy += 72; break;
 }
-/*switch (room)
-{
-    case BarriaLandingSite:
-        tsx -= 72;
-        break;
-    case BarriaIntWest:
-        if (trans = 1) tsx += 72;
-        if (trans = 2) tsy += 72;
-        break;
-}*/
 oPlayer.x = tsx; oPlayer.y = tsy; oPlayer.image_angle = transdir; oPlayer.WeaponAim = transdir; // Place the player.
 with (oPlayer)
 {    

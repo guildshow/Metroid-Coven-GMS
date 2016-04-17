@@ -10,12 +10,12 @@ switch(myid)
 {
     case Enemies.eZoomer:
         if (x = xprevious) && (y = yprevious) image_speed = 0;
-        else image_speed = 1;
+        else image_speed = speed/MaxSpeed;
         if (sprite_index = ActorSpriteHit) && (alarm[0] = 0) sprite_index = ActorSprite;
         if (alarm[1] = 0)
         {
             destdir = random(360);
-            speed = MaxSpeed
+            speed = MaxSpeed;
             if (instance_exists(oPlayer))
             {
                 if (point_distance(x,y,oPlayer.x,oPlayer.y) < 150)
@@ -24,7 +24,7 @@ switch(myid)
                     speed = MaxSpeed;
                 }
             }
-            alarm[1] = random(200);
+            alarm[1] = 100+round(random(200));
         }
         if (direction < destdir+5) direction += 5
         if (direction > destdir-5) direction -= 5

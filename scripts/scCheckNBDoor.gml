@@ -11,6 +11,7 @@ switch (argument0)
         break;
     // --- Green (Super Missile) ---
     case 2:
+        if (room = BarriaIceTunnelN) and (eId.OpenedBarriaIceTunnelNGreen = true) scDefineDoor(Doors.dBlue);
         break;
     // --- Yellow (Power Bomb) ---
     case 3:

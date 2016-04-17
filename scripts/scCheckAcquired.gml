@@ -10,6 +10,7 @@ switch (argument0)
     case 2:
         if (room = BarriaLandingSite) and (eId.HasBarriaLandingSiteME = true) instance_destroy();
         if (room = BarriaCacheMissile) and (eId.HasBarriaCacheMissileME = true) instance_destroy();
+        if (room = BarriaIceTunnelN) and (eId.HasBarriaIceTunnelNME = true) instance_destroy();
         break;
     // --- Super Missile Expansions ---
     case 3:

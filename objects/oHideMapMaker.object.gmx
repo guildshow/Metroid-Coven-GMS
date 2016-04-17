@@ -66,6 +66,22 @@ surface_set_target(hidden);
             tile_delete(tile);
         }
     }
+    // Repeat, but with -3 as the layer, and back3 as the background index.
+    for (ix = 0; ix &lt;= room_width; ix += 16)
+    for (iy = 0; iy &lt;= room_height; iy += 16)
+    {
+        tile = tile_layer_find(-3, ix, iy);
+        if (tile != -1) then
+        {
+            back3 = tile_get_background(tile);
+            top = tile_get_top(tile);
+            left = tile_get_left(tile);
+            width = tile_get_width(tile);
+            height = tile_get_height(tile);
+            draw_background_part(back2, left, top, width, height, ix, iy);
+            tile_delete(tile);
+        }
+    }
     // Take the completed background, convert it into a sprite.
     sprHideMap = sprite_create_from_surface(hidden,0,0,room_width,room_height,true,1,0,0);  
     // Assign the new sprite to an object, create the object, then cleanup.

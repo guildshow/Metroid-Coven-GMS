@@ -319,9 +319,9 @@
     </backgrounds>
     <backgrounds name="Barria Tundra">
       <background>background\grdSnow</background>
+      <background>background\tilBarriaIceCave</background>
       <background>background\tilBarriaInner</background>
       <background>background\tilBarriaOuter</background>
-      <background>background\tilBarriaIceCave</background>
       <background>background\tilBarriaInstallationInner</background>
       <background>background\tilBarriaInstallationOuter</background>
     </backgrounds>
@@ -371,8 +371,8 @@
     </scripts>
     <scripts name="Actors">
       <script>scripts\scDefineActor.gml</script>
-      <script>scripts\scActorDeath.gml</script>
       <script>scripts\scActorStep.gml</script>
+      <script>scripts\scActorDeath.gml</script>
     </scripts>
     <scripts name="Engine Initialization">
       <script>scripts\GameInit.gml</script>
@@ -603,8 +603,8 @@
     <room>rooms\InitRoom</room>
     <rooms name="Barria">
       <room>rooms\BarriaLandingSite</room>
-      <room>rooms\BarriaIceTunnelN</room>
       <room>rooms\BarriaIntWest</room>
+      <room>rooms\BarriaIceTunnelN</room>
       <room>rooms\BarriaCacheMissile</room>
     </rooms>
     <rooms name="Generic Rooms">

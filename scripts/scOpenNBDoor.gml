@@ -10,6 +10,7 @@ switch (argument0)
         if (room = BarriaCacheMissile) eId.OpenedBarriaCacheMissileRedW = true;
         break;
     // --- Green (Super Missile) ---
+        if (room = BarriaIceTunnelN) eId.OpenedBarriaIceTunnelNGreen = true;
     case 2:
         break;
     // --- Yellow (Power Bomb) ---
