@@ -28,7 +28,7 @@ scan = 0; // Scan variant.
 reveal = false; // Used to tell all lights in the game whether or not to reveal hidden areas in oHideMap.
 hiddenfade = 0; // For cleanly fading lights in and out in hidden areas.
 hiddenfade2 = 0; // ^
-range = 20; // Universal setting for the radius of all reveal circles in the game.
+range = 18; // Universal setting for the radius of all reveal circles in the game.
 brightness = 1; // Universal setting for the radius of all lights in the game.
                 // Takes the base size of any light and multiplies by this number.
 

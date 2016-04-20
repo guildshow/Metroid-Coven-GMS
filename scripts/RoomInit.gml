@@ -15,12 +15,6 @@ if (object_index = eId)
             vector_world_add(oVectorLine);
             vector_path_add(oVectorLine,BarriaIntWestPath1,0,0,0);
             break;
-        case BarriaCacheMissile:
-            if (!instance_exists(oWeatherSnow)) instance_create(0,0,oWeatherSnow);
-            vector_world_add(oVectorLine);
-            vector_path_add(oVectorLine,BarriaCacheMissilePath1,0,0,0);
-            vector_path_add(oVectorLine,BarriaCacheMissilePath2,0,0,0);
-            break;
         case BarriaIceTunnelN:
             if (!instance_exists(oWeatherSnow)) instance_create(0,0,oWeatherSnow);
             vector_world_add(oVectorLine);
@@ -28,6 +22,18 @@ if (object_index = eId)
             vector_path_add(oVectorLine,BarriaIceTunnelNPath2,0,0,0);
             vector_path_add(oVectorLine,BarriaIceTunnelNPath3,0,0,0);
             vector_path_add(oVectorLine,BarriaIceTunnelNPath4,0,0,0);
+            break;
+        case BarriaCacheMorphBall:
+            if (!instance_exists(oWeatherSnow)) instance_create(0,0,oWeatherSnow);
+            vector_world_add(oVectorLine);
+            vector_path_add(oVectorLine,BarriaCacheMorphBallPath1,0,0,0);
+            vector_path_add(oVectorLine,BarriaCacheMorphBallPath2,0,0,0);
+            break;
+        case BarriaCacheMissile:
+            if (!instance_exists(oWeatherSnow)) instance_create(0,0,oWeatherSnow);
+            vector_world_add(oVectorLine);
+            vector_path_add(oVectorLine,BarriaCacheMissilePath1,0,0,0);
+            vector_path_add(oVectorLine,BarriaCacheMissilePath2,0,0,0);
             break;
     }
 }

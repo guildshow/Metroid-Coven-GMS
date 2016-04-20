@@ -16,8 +16,8 @@
   <clearDisplayBuffer>0</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1681</w>
-    <h>973</h>
+    <w>1696</w>
+    <h>968</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>253</xoffset>
-    <yoffset>804</yoffset>
+    <xoffset>-178</xoffset>
+    <yoffset>285</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="grdSnow" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -86,7 +86,6 @@
     <instance objName="oStickLightS" x="367" y="224" name="inst_1915F45F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oStickLightW" x="586" y="354" name="inst_008C0982" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDomeLight" x="530" y="88" name="inst_15BCB80A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlayer" x="384" y="944" name="inst_CC66DFE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oItem" x="168" y="114" name="inst_1FBB7EA7" locked="0" code="scDefineItem(Items.iMissileExpansion);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDomeLight" x="104" y="103" name="inst_4C7E4B4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDomeLight" x="174" y="201" name="inst_9C4337F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -100,6 +99,7 @@
     <instance objName="oSmallWallLightN" x="200" y="400" name="inst_6ADD5987" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSmallWallLightS" x="200" y="464" name="inst_04744B9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoorGuideW" x="304" y="432" name="inst_0277BB71" locked="0" code="scDefineDoor(Doors.dBlue);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oDomeLight" x="182" y="114" name="inst_DD69AB01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tilBarriaIceCave" x="432" y="896" w="16" h="16" xo="0" yo="336" id="10015290" name="inst_96C8C2AC" depth="1999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

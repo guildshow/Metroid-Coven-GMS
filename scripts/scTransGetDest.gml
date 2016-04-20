@@ -31,11 +31,17 @@ switch (room) // Determine current room.
         if (other.trans = 3)
             { eId.destinationroom = BarriaCacheMissile; eId.vox = 320; }
         break;
-    case BarriaCacheMissile:
-        if (other.trans = 3) eId.destinationroom = BarriaIntWest;
-        break;
     case BarriaIceTunnelN:
         if (other.trans = 2)
             { eId.destinationroom = BarriaIntWest; eId.vox = 320; }
+        if (other.trans = 1)
+            { eId.destinationroom = BarriaCacheMorphBall; eId.vox = 320; }
+        break;
+    case BarriaCacheMorphBall:
+        if (other.trans = 1) 
+            { eId.destinationroom = BarriaIceTunnelN; eId.vox = 320; }
+        break;
+    case BarriaCacheMissile:
+        if (other.trans = 3) eId.destinationroom = BarriaIntWest;
         break;
 }

@@ -332,16 +332,6 @@
     </backgrounds>
   </backgrounds>
   <paths name="paths">
-    <paths name="Barria">
-      <path>paths\BarriaLandingSitePath1</path>
-      <path>paths\BarriaIntWestPath1</path>
-      <path>paths\BarriaCacheMissilePath1</path>
-      <path>paths\BarriaCacheMissilePath2</path>
-      <path>paths\BarriaIceTunnelNPath1</path>
-      <path>paths\BarriaIceTunnelNPath2</path>
-      <path>paths\BarriaIceTunnelNPath3</path>
-      <path>paths\BarriaIceTunnelNPath4</path>
-    </paths>
     <paths name="room0">
       <path>paths\room0path1</path>
       <path>paths\room0path2</path>
@@ -354,6 +344,18 @@
     </paths>
     <paths name="room1">
       <path>paths\room1path1</path>
+    </paths>
+    <paths name="Barria">
+      <path>paths\BarriaLandingSitePath1</path>
+      <path>paths\BarriaIntWestPath1</path>
+      <path>paths\BarriaCacheMissilePath1</path>
+      <path>paths\BarriaCacheMissilePath2</path>
+      <path>paths\BarriaIceTunnelNPath1</path>
+      <path>paths\BarriaIceTunnelNPath2</path>
+      <path>paths\BarriaIceTunnelNPath3</path>
+      <path>paths\BarriaIceTunnelNPath4</path>
+      <path>paths\BarriaCacheMorphBallPath1</path>
+      <path>paths\BarriaCacheMorphBallPath2</path>
     </paths>
   </paths>
   <scripts name="scripts">
@@ -605,6 +607,7 @@
       <room>rooms\BarriaLandingSite</room>
       <room>rooms\BarriaIntWest</room>
       <room>rooms\BarriaIceTunnelN</room>
+      <room>rooms\BarriaCacheMorphBall</room>
       <room>rooms\BarriaCacheMissile</room>
     </rooms>
     <rooms name="Generic Rooms">
