@@ -2,7 +2,6 @@
 // argument1 = y
 // argument2 = radius
 // argument3 = brightness
-// argument4 = reveal
 if !instance_exists(oLE) {return -1}
 if argument0+argument2< view_xview[0] {return 1};
 if argument1+argument2< view_yview[0] {return 1};

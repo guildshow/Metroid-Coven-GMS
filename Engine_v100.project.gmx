@@ -401,10 +401,10 @@
           <script>scripts\scCheckNBDoor.gml</script>
         </scripts>
       </scripts>
-      <scripts name="Lights">
+      <scripts name="Lights and Hidden Areas">
         <script>scripts\scLightInit.gml</script>
         <script>scripts\scLightCircle.gml</script>
-        <script>scripts\scRevealCircle.gml</script>
+        <script>scripts\scFadeHiddenArea.gml</script>
       </scripts>
     </scripts>
     <scripts name="Inventory">
@@ -579,10 +579,6 @@
         <object>objects\oLargePCW</object>
         <object>objects\oLargePCN</object>
         <object>objects\oLargePCS</object>
-      </objects>
-      <objects name="Surfaces">
-        <object>objects\oHideMapMaker</object>
-        <object>objects\oHideMap</object>
       </objects>
       <objects name="Weather">
         <object>objects\oWeatherSnow</object>

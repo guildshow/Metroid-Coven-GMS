@@ -43,7 +43,7 @@ FlashMe = 0;
 FlashTime = 1;
 
 Radius = max(sprite_get_width(LightSprite),sprite_get_width(AmbLightSprite));
-alarm[11] = 4;
+alarm[11] = 1;
 </string>
           </argument>
         </arguments>
@@ -109,7 +109,7 @@ if (AmIOn = true)
 }
 else
 { 
-    if (fade &lt; 1) fade += .1;
+    if (fade &lt; 1) fade += .05;
 }
 
 if (FlashMe != 0)
@@ -123,14 +123,37 @@ if (FlashMe != 0)
     }
 }
 
-if (place_meeting(x,y,oHideMap)) and (hideable = true)
+if (tile_layer_find(-1,x,y))
+or (tile_layer_find(-2,x,y))
+or (tile_layer_find(-3,x,y))
 {
-    if (eId.hiddenfade &gt; 0) AmIOn = true;
+    if (eId.hiddenfade1 &lt; 1) AmIOn = true;
     else AmIOn = false;
 }
 
-scRevealCircle(x,y,eId.range*1.5,eId.hiddenfade/20);
-scRevealCircle(x,y,eId.range*8,.5*eId.hiddenfade/40);
+if (tile_layer_find(-4,x,y))
+or (tile_layer_find(-5,x,y))
+or (tile_layer_find(-6,x,y))
+{
+    if (eId.hiddenfade2 &lt; 1) AmIOn = true;
+    else AmIOn = false;
+}
+
+if (tile_layer_find(-7,x,y))
+or (tile_layer_find(-8,x,y))
+or (tile_layer_find(-9,x,y))
+{
+    if (eId.hiddenfade3 &lt; 1) AmIOn = true;
+    else AmIOn = false;
+}
+
+if (tile_layer_find(-10,x,y))
+or (tile_layer_find(-11,x,y))
+or (tile_layer_find(-12,x,y))
+{
+    if (eId.hiddenfade4 &lt; 1) AmIOn = true;
+    else AmIOn = false;
+}
 </string>
           </argument>
         </arguments>

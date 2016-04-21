@@ -2,7 +2,7 @@
 image_blend = c_white;
 ox = x;
 oy = y;
-mastersize = 6; // The global "scale" of each light.
+mastersize = 4; // The global "scale" of each light.
 size = 1;
 xsize = 1;
 ysize = 1;
